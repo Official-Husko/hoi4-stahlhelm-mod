@@ -1,0 +1,423 @@
+# All German WW2 helmet equipment
+
+equipments = {
+
+	helmet_equipment = {
+		year = 1916
+
+		is_archetype = yes
+		picture = archetype_helmet_equipment
+		is_buildable = no
+		type = {
+			infantry
+			support
+		}
+		group_by = archetype
+
+		interface_category = interface_category_land
+
+		upgrades = {
+
+
+		}
+
+		is_convertable = yes
+
+		active = yes
+
+		#Misc Abilities
+		reliability = 0.85
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 2
+		breakthrough = 0
+		hardness = 0
+		armor_value = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+
+		build_cost_ic = 0.1
+		resources = {
+			steel = 1
+		}
+
+	}
+
+	# --- Outdated tier (pre-1936 legacy stock) ---
+	# Hand-finished WW1-era construction, more expensive than the WW2 line
+	# despite being weaker - the M35 stamping process is what made helmets
+	# both better AND cheaper to mass-produce.
+
+	helmet_equipment_m16 = {
+		year = 1916
+
+		archetype = helmet_equipment
+		active = yes
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m16
+		}
+
+		defense = 2
+		reliability = 0.7
+
+		build_cost_ic = 0.14
+	}
+
+	helmet_equipment_m17 = {
+		year = 1917
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m16
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m16
+			helmet_equipment_m17
+		}
+
+		defense = 2.2
+		reliability = 0.72
+
+		build_cost_ic = 0.14
+	}
+
+	helmet_equipment_m18 = {
+		year = 1918
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m17
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m16
+			helmet_equipment_m17
+			helmet_equipment_m18
+		}
+
+		defense = 2.4
+		reliability = 0.74
+
+		build_cost_ic = 0.12
+	}
+
+	# M18 "Ear Cut" - cutaway flared sides for better hearing
+	helmet_equipment_m18ec = {
+		year = 1918
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m18
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m16
+			helmet_equipment_m17
+			helmet_equipment_m18
+			helmet_equipment_m18ec
+		}
+
+		defense = 2.5
+		reliability = 0.75
+
+		build_cost_ic = 0.12
+	}
+
+	helmet_equipment_m34 = {
+		year = 1934
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m18ec
+		priority = 02
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m16
+			helmet_equipment_m17
+			helmet_equipment_m18
+			helmet_equipment_m18ec
+			helmet_equipment_m34
+		}
+
+		defense = 2.8
+		reliability = 0.78
+
+		build_cost_ic = 0.13
+	}
+
+	# --- Main combat line ---
+	# M35 (best quality, priciest) -> M40 (a bit cheaper) -> M42 (cheapest,
+	# worst) -> M45 Prototype (cheaper still, worst of all, 1945 collapse-era).
+
+	helmet_equipment_m35 = {
+		year = 1936
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m34
+		priority = 10
+		visual_level = 1
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m16
+			helmet_equipment_m17
+			helmet_equipment_m18
+			helmet_equipment_m18ec
+			helmet_equipment_m34
+			helmet_equipment_m35
+		}
+
+		defense = 4.2
+		reliability = 0.88
+
+		build_cost_ic = 0.2
+	}
+
+	# Paratrooper pattern - lower profile, no brim, more expensive liner
+	helmet_equipment_m38 = {
+		year = 1938
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m35
+		priority = 08
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m35
+			helmet_equipment_m38
+		}
+
+		defense = 3.8
+		reliability = 0.85
+
+		build_cost_ic = 0.18
+	}
+
+	# Simplified stamping, rolled edge dropped
+	helmet_equipment_m40 = {
+		year = 1940
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m35
+		priority = 10
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m35
+			helmet_equipment_m38
+			helmet_equipment_m40
+		}
+
+		defense = 4
+		reliability = 0.85
+
+		build_cost_ic = 0.17
+	}
+
+	# Further simplified, no rolled edge, lower-grade steel
+	helmet_equipment_m42 = {
+		year = 1942
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m40
+		priority = 10
+		visual_level = 3
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m35
+			helmet_equipment_m38
+			helmet_equipment_m40
+			helmet_equipment_m42
+		}
+
+		defense = 3.6
+		reliability = 0.78
+
+		build_cost_ic = 0.12
+	}
+
+	# Late-war one-piece simplified shell, rushed into service as the war
+	# economy collapsed - cheapest and worst-protecting of the line.
+	helmet_equipment_m45_prototype = {
+		year = 1945
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m42
+		priority = 10
+		visual_level = 4
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m35
+			helmet_equipment_m38
+			helmet_equipment_m40
+			helmet_equipment_m42
+			helmet_equipment_m45_prototype
+		}
+
+		defense = 3.2
+		reliability = 0.65
+
+		build_cost_ic = 0.09
+	}
+
+	# --- Luftschutz "Gladiator" branch (civil air defense) ---
+	# Same M38 Gladiator pattern, simplified across the war from 3-piece to
+	# 2-piece to a 1-piece shell (the 1-piece version is often labeled M44).
+
+	helmet_equipment_gladiator_m38_3pc = {
+		year = 1938
+
+		archetype = helmet_equipment
+		priority = 06
+		visual_level = 1
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_gladiator_m38_3pc
+		}
+
+		defense = 2.5
+		reliability = 0.85
+
+		build_cost_ic = 0.09
+	}
+
+	helmet_equipment_gladiator_m38_2pc = {
+		year = 1940
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_gladiator_m38_3pc
+		priority = 06
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_gladiator_m38_3pc
+			helmet_equipment_gladiator_m38_2pc
+		}
+
+		defense = 2.6
+		reliability = 0.84
+
+		build_cost_ic = 0.075
+	}
+
+	# 1-piece shell, often labeled "M44"
+	helmet_equipment_gladiator_m38_1pc = {
+		year = 1944
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_gladiator_m38_2pc
+		priority = 06
+		visual_level = 3
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_gladiator_m38_3pc
+			helmet_equipment_gladiator_m38_2pc
+			helmet_equipment_gladiator_m38_1pc
+		}
+
+		defense = 2.7
+		reliability = 0.82
+
+		build_cost_ic = 0.06
+	}
+
+	# --- Beaded variants: production-defect output only, never directly researched ---
+
+	helmet_equipment_m35_beaded = {
+		year = 1936
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m35
+		is_buildable = no
+		priority = 01
+		visual_level = 1
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m35
+			helmet_equipment_m35_beaded
+		}
+
+		defense = 3.5
+		reliability = 0.6
+
+		build_cost_ic = 0.2
+	}
+
+	helmet_equipment_m40_beaded = {
+		year = 1940
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m40
+		is_buildable = no
+		priority = 01
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m40
+			helmet_equipment_m40_beaded
+		}
+
+		defense = 3.3
+		reliability = 0.62
+
+		build_cost_ic = 0.17
+	}
+
+	helmet_equipment_m42_beaded = {
+		year = 1942
+
+		archetype = helmet_equipment
+		parent = helmet_equipment_m42
+		is_buildable = no
+		priority = 01
+		visual_level = 3
+
+		is_convertable = yes
+
+		can_convert_from = {
+			helmet_equipment_m42
+			helmet_equipment_m42_beaded
+		}
+
+		defense = 3
+		reliability = 0.6
+
+		build_cost_ic = 0.12
+	}
+
+}
