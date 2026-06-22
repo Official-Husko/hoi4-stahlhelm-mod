@@ -1,0 +1,21 @@
+# Test module for the helmet Equipment Designer - a single, harmless
+# optional slot/module just to verify whether the Design button actually
+# requires module_slots to contain at least one real entry (every known
+# working example - vanilla tanks/ships, and the "Infantry Equipment
+# Designer" mod's own infantry_equipment - has at least one slot; ours had
+# none). Neutral stats on purpose since real upgrade modules are a
+# deferred follow-up.
+
+equipment_modules = {
+
+	STH_helmet_liner_standard = {
+		category = STH_helmet_liner_type
+
+		add_stats = {
+			reliability = 0
+		}
+
+		xp_cost = 0
+	}
+
+}

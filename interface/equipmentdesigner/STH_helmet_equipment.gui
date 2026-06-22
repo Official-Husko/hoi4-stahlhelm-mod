@@ -1,0 +1,23 @@
+## Minimal Equipment Designer layout for the helmet archetype - enables the
+## icon picker only, no module slots yet (STH_helmet_equipment's
+## module_slots block is currently empty). The engine looks up a window
+## named "equipment_designer_<archetype_id>" by name across all loaded .gui
+## files and slots it into the main equipmentdesignerview.gui at runtime -
+## confirmed via the "Infantry Equipment Designer" workshop mod's own
+## interface/equipmentdesigner/infantry_equipment.gui, which uses the exact
+## same naming convention and outer size (508x248) for its reserved layout
+## area. Once real upgrade modules are added later, this file gets slot
+## sub-windows added the same way that mod's infantry_equipment.gui does.
+guiTypes = {
+	containerWindowType = {
+		name = "equipment_designer_STH_helmet_equipment"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_STH_helmet_equipment"
+			position = { x=0 y=0 }
+		}
+	}
+}

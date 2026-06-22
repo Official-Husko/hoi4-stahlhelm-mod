@@ -1,0 +1,10 @@
+# Backdrop shown behind the (currently empty) module slot area in the
+# helmet designer screen. Reuses the archetype icon as a placeholder -
+# swap for a real technical-drawing-style blueprint image later if/when
+# upgrade modules are added.
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TC_STH_helmet_equipment"
+		textureFile = "gfx/interface/archetypes/STH_archetype_helmet_equipment.dds"
+	}
+}

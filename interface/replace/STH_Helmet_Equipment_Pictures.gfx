@@ -4,6 +4,12 @@
 spriteTypes = {
 
 	# --- helmet_equipment_gladiator_m38_1pc ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_gladiator_m38_1pc_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/gladiator_m38_1pc/gladiator_m38_1pc_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_gladiator_m38_1pc_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/gladiator_m38_1pc/gladiator_m38_1pc_01.dds"
@@ -46,6 +52,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_gladiator_m38_2pc ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_gladiator_m38_2pc_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/gladiator_m38_2pc/gladiator_m38_2pc_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_gladiator_m38_2pc_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/gladiator_m38_2pc/gladiator_m38_2pc_01.dds"
@@ -88,6 +100,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_gladiator_m38_3pc ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_gladiator_m38_3pc_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/gladiator_m38_3pc/gladiator_m38_3pc_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_gladiator_m38_3pc_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/gladiator_m38_3pc/gladiator_m38_3pc_01.dds"
@@ -130,6 +148,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m16 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m16_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m16/m16_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m16_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m16/m16_01.dds"
@@ -172,6 +196,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m17 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m17_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m17/m17_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m17_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m17/m17_01.dds"
@@ -214,6 +244,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m18 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m18_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m18/m18_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m18_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m18/m18_01.dds"
@@ -256,6 +292,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m18ec ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m18ec_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m18ec/m18ec_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m18ec_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m18ec/m18ec_01.dds"
@@ -298,6 +340,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m18_ventless ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m18_ventless_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m18_ventless/m18_ventless_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m18_ventless_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m18_ventless/m18_ventless_01.dds"
@@ -340,6 +388,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m34 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m34_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m34/m34_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m34_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m34/m34_01.dds"
@@ -382,6 +436,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m35 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m35_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m35/m35_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m35_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m35/m35_01.dds"
@@ -424,6 +484,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m35_beaded ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m35_beaded_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m35_beaded/m35_beaded_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m35_beaded_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m35_beaded/m35_beaded_01.dds"
@@ -465,7 +531,61 @@ spriteTypes = {
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m35_beaded/m35_beaded_10.dds"
 	}
 
+	# --- helmet_equipment_m37 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_01.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_01"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_01.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_02"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_02.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_03"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_03.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_04"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_04.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_05"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_05.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_06"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_06.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_07"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_07.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_08"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_08.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_09"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_09.dds"
+	}
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m37_10"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m37/m37_10.dds"
+	}
+
 	# --- helmet_equipment_m38 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m38_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m38/m38_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m38_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m38/m38_01.dds"
@@ -508,6 +628,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m40 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m40_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m40/m40_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m40_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m40/m40_01.dds"
@@ -550,6 +676,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m40_beaded ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m40_beaded_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m40_beaded/m40_beaded_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m40_beaded_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m40_beaded/m40_beaded_01.dds"
@@ -592,6 +724,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m42 ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m42_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m42/m42_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m42_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m42/m42_01.dds"
@@ -634,6 +772,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m42_beaded ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m42_beaded_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m42_beaded/m42_beaded_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m42_beaded_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m42_beaded/m42_beaded_01.dds"
@@ -676,6 +820,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_m45_prototype ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_m45_prototype_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m45_prototype/m45_prototype_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_m45_prototype_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/m45_prototype/m45_prototype_01.dds"
@@ -718,6 +868,12 @@ spriteTypes = {
 	}
 
 	# --- helmet_equipment_volkssturm ---
+	# Canonical default/main image (production, equipment list, and
+	# research tree icon borrowing all look this up by default).
+	SpriteType = {
+		name = "GFX_STH_helmet_equipment_volkssturm_medium"
+		texturefile = "gfx/interface/STH_equipment_pictures/helmets/volkssturm/volkssturm_01.dds"
+	}
 	SpriteType = {
 		name = "GFX_STH_helmet_equipment_volkssturm_01"
 		texturefile = "gfx/interface/STH_equipment_pictures/helmets/volkssturm/volkssturm_01.dds"

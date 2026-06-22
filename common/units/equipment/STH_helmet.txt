@@ -8,20 +8,43 @@ equipments = {
 		is_archetype = yes
 		picture = STH_archetype_helmet_equipment
 		is_buildable = no
+		# "armor" added alongside the real types, not in place of them -
+		# confirmed via the "Infantry Equipment Designer" mod's own
+		# train_equipment archetype ("type = { armor train }"): the
+		# Equipment Designer screen only recognizes "armor" as a marker
+		# that an archetype is designable, while infantry/support stay
+		# intact for actual unit "need" matching.
 		type = {
+			armor
 			infantry
 			support
 		}
 		group_by = archetype
 
 		interface_category = interface_category_land
+		priority = 2000
 
-		upgrades = {
-
-
+		# No "upgrades = { }" block here on purpose - that's the OLD linear
+		# upgrade-chain system, mutually exclusive with module_slots (the
+		# Equipment Designer system). Neither the vanilla tank/ship/plane
+		# archetypes nor the "Infantry Equipment Designer" mod's
+		# infantry_equipment archetype define "upgrades" at all - having it
+		# present, even empty, may be exactly what was suppressing the
+		# Design button despite module_slots being defined.
+		#
+		# One harmless optional slot (not zero) - every known working
+		# example (vanilla tanks/ships, the IED mod's own infantry_equipment)
+		# has at least one real slot; testing whether a literally empty
+		# module_slots block was itself the remaining blocker. Real upgrade
+		# modules are still a deferred follow-up.
+		module_slots = {
+			liner_slot = {
+				required = no
+				allowed_module_categories = {
+					STH_helmet_liner_type
+				}
+			}
 		}
-
-		is_convertable = yes
 
 		active = yes
 
@@ -54,6 +77,11 @@ equipments = {
 		year = 1916
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m16
 		active = yes
 		priority = 01
 		visual_level = 0
@@ -74,6 +102,11 @@ equipments = {
 		year = 1917
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m17
 		parent = STH_helmet_equipment_m16
 		priority = 01
 		visual_level = 0
@@ -95,6 +128,11 @@ equipments = {
 		year = 1918
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m18
 		parent = STH_helmet_equipment_m17
 		priority = 01
 		visual_level = 0
@@ -120,6 +158,11 @@ equipments = {
 		year = 1918
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m18_ventless
 		parent = STH_helmet_equipment_m18
 		is_buildable = no
 		priority = 01
@@ -143,6 +186,11 @@ equipments = {
 		year = 1918
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m18ec
 		parent = STH_helmet_equipment_m18
 		priority = 01
 		visual_level = 0
@@ -170,6 +218,11 @@ equipments = {
 		year = 1934
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m34
 		parent = STH_helmet_equipment_m18ec
 		priority = 02
 		visual_level = 1
@@ -198,6 +251,11 @@ equipments = {
 		year = 1936
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m35
 		parent = STH_helmet_equipment_m34
 		priority = 10
 		visual_level = 1
@@ -225,6 +283,11 @@ equipments = {
 		year = 1937
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m37
 		parent = STH_helmet_equipment_m35
 		priority = 07
 		visual_level = 2
@@ -248,6 +311,11 @@ equipments = {
 		year = 1938
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m38
 		parent = STH_helmet_equipment_m37
 		priority = 08
 		visual_level = 2
@@ -271,6 +339,11 @@ equipments = {
 		year = 1940
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m40
 		parent = STH_helmet_equipment_m35
 		priority = 10
 		visual_level = 2
@@ -294,6 +367,11 @@ equipments = {
 		year = 1942
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m42
 		parent = STH_helmet_equipment_m40
 		priority = 10
 		visual_level = 3
@@ -319,6 +397,11 @@ equipments = {
 		year = 1945
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m45_prototype
 		parent = STH_helmet_equipment_m42
 		priority = 10
 		visual_level = 4
@@ -347,6 +430,11 @@ equipments = {
 		year = 1938
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_gladiator_m38_3pc
 		priority = 06
 		visual_level = 1
 
@@ -366,6 +454,11 @@ equipments = {
 		year = 1940
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_gladiator_m38_2pc
 		parent = STH_helmet_equipment_gladiator_m38_3pc
 		priority = 06
 		visual_level = 2
@@ -388,6 +481,11 @@ equipments = {
 		year = 1944
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_gladiator_m38_1pc
 		parent = STH_helmet_equipment_gladiator_m38_2pc
 		priority = 06
 		visual_level = 3
@@ -415,6 +513,11 @@ equipments = {
 		year = 1944
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_volkssturm
 		parent = STH_helmet_equipment_m42
 		priority = 04
 		visual_level = 3
@@ -451,6 +554,11 @@ equipments = {
 		year = 1936
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m35_beaded
 		parent = STH_helmet_equipment_m35
 		is_buildable = no
 		priority = 01
@@ -473,6 +581,11 @@ equipments = {
 		year = 1940
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m40_beaded
 		parent = STH_helmet_equipment_m40
 		is_buildable = no
 		priority = 01
@@ -495,6 +608,11 @@ equipments = {
 		year = 1942
 
 		archetype = STH_helmet_equipment
+		module_slots = inherit
+		default_modules = {
+			liner_slot = STH_helmet_liner_standard
+		}
+		picture = STH_helmet_equipment_m42_beaded
 		parent = STH_helmet_equipment_m42
 		is_buildable = no
 		priority = 01
