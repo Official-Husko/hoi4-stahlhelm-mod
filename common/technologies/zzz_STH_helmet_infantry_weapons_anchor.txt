@@ -1,0 +1,137 @@
+# A new tech only gets a rendered grid box in the tech tree if some existing
+# tech's "path = { leads_to_tech = ... }" points to it - the engine never
+# creates a grid box from a folder/position block alone (confirmed via the
+# modding wiki's Technology modding page: "If a technology doesn't have any
+# other technology as a requirement using path in any folder where it's
+# placed, then it must have a separate gridboxType definition within the
+# folder's container window. Otherwise, the technology branch will never
+# appear in-game."). Defining that gridboxType ourselves would mean fully
+# overriding interface/countrytechtreeview.gui - a single 6000+ line file
+# covering every nation's entire tech tree, not something to duplicate for
+# 3 grid boxes.
+#
+# Anchored to "paratroopers" rather than tech_trucks or tech_special_forces:
+# tech_special_forces has "allow_branch = { NOT = { has_dlc = ... } }" - it
+# (and anything path-anchored to it) is invisible for anyone who owns "Arms
+# Against Tyranny", which the user does. "paratroopers" has no DLC
+# dependency, sits lower on the page than tech_trucks (pixel y = 1025 vs
+# 620), and fits thematically now that the helmet line has its own
+# paratrooper sub-branch (M37 -> M38). Our root tech is still force-granted
+# to Germany via STH_helmet_starting_research.txt's on_startup effect, which
+# bypasses any path/prerequisite check entirely, so anchoring here adds no
+# real research gate even though "paratroopers" itself isn't pre-researched
+# for Germany at the 1936 start. Local rows x = 1, 2, 4, 5 are confirmed
+# free of any vanilla content in paratroopers' grid box (vanilla's own
+# paratroopers/paratroopers2/paratroopers3 chain only ever uses x = 3).
+#
+# HOI4 has no partial-merge for an existing tech ID - redefining one
+# replaces the whole entry - so this restates 100% of paratroopers'
+# original vanilla fields and just appends the 3 new path blocks. The
+# "zzz_" filename prefix ensures this evaluates after vanilla's own
+# infantry.txt so our version wins.
+
+technologies = {
+
+	paratroopers = {
+
+		enable_subunits = {
+			paratrooper
+		}
+		enable_subunits = {
+			limit = { has_dlc = "Thunder at Our Gates"}
+			hq_paratrooper
+		}
+
+		path = {
+			leads_to_tech = paratroopers2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_program
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_gladiator_program
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_volkssturm
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1936
+		folder = {
+			name = infantry_folder
+			position = { x = 3 y = @1936 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = paratrooper
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_paratroopers"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+
+			IF = {
+				limit = { has_dlc = "Gotterdammerung" }
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = raid_type_mine_sabotage_raid
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_RAID
+					RAID_TYPE = raid_type_pathfinder_raid
+				}
+			}
+		}
+
+		categories = {
+			para_tech
+			cat_special_forces_generic
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 20
+				tag = USA
+				date > 1943.1.1
+			}
+
+			modifier = {
+				factor = 2
+				tag = GER
+			}
+
+			modifier = {
+				factor = 5
+				tag = ENG
+			}
+
+			modifier = { #Sokolov Raid prep
+				factor = 20
+				tag = GER
+				has_completed_focus = GER_anschluss
+				CZE = {
+					is_ai = no
+				}
+			}
+
+			modifier = {
+				factor = 5
+				tag = GER
+				has_completed_focus = GER_fallschirmjager
+			}
+		}
+	}
+
+}

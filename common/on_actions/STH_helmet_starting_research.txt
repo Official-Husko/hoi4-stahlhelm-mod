@@ -1,0 +1,19 @@
+# Grants Germany its pre-1936 helmet research at game start, additively -
+# on_startup fires once globally (unlike on_daily, it does not auto-scope
+# to a country), so GER is scoped explicitly rather than touching the
+# vanilla GER history file directly.
+
+on_actions = {
+	on_startup = {
+		effect = {
+			GER = {
+				set_technology = {
+					STH_helmet_program = 1
+					STH_helmet_design_m17 = 1
+					STH_helmet_design_m18 = 1
+					STH_helmet_design_m35 = 1
+				}
+			}
+		}
+	}
+}

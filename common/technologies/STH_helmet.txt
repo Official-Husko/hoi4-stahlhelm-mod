@@ -1,0 +1,438 @@
+technologies = {
+
+	# --- Main combat helmet line (infantry_folder, x = 1) ---
+	# Positions are plain integers. Vanilla's own infantry.txt uses "y =
+	# @1936" etc., but those are ordinary per-file @variable macros it
+	# defines locally at the top of that file (@1936 = 2, @1938 = 4, ...) -
+	# not a special engine feature. Using "@1936" here without defining it
+	# ourselves was an undefined token and a real parse error, not the
+	# actual cause of the missing grid box. These positions use the same
+	# literal row values vanilla's own macros resolve to.
+	#
+	# The whole branch is anchored onto vanilla's "paratroopers" tech (see
+	# zzz_STH_helmet_infantry_weapons_anchor.txt) rather than tech_trucks -
+	# paratroopers sits lower on the page and has no DLC dependency. Its own
+	# vanilla content only ever uses local x = 3, so x = 1, 2, 4, 5 here are
+	# all confirmed free.
+
+	STH_helmet_program = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m16
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_m17
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1916
+		folder = {
+			name = infantry_folder
+			position = { x = 1 y = 0 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	STH_helmet_design_m17 = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m17
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_m18
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1917
+		folder = {
+			name = infantry_folder
+			position = { x = 1 y = 2 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	STH_helmet_design_m18 = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m18
+			STH_helmet_equipment_m18ec
+			STH_helmet_equipment_m34
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_m35
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1918
+		folder = {
+			name = infantry_folder
+			position = { x = 1 y = 4 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	STH_helmet_design_m35 = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m35
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_m37
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = STH_helmet_design_m40
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1936
+		folder = {
+			name = infantry_folder
+			position = { x = 1 y = 6 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+
+			modifier = {
+				factor = 10
+				date > "1936.1.3"
+			}
+		}
+	}
+
+	# --- Paratrooper sub-branch off M35, x = 2 ---
+	# A new early trial pattern (M37) precedes the refined M38 - M38 is the
+	# better, cheaper design that actually saw service.
+
+	STH_helmet_design_m37 = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m37
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_m38
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1937
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 8 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+		}
+	}
+
+	STH_helmet_design_m38 = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m38
+		}
+
+		research_cost = 1.5
+		start_year = 1938
+		folder = {
+			name = infantry_folder
+			position = { x = 2 y = 10 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+		}
+	}
+
+	STH_helmet_design_m40 = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m40
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_m42
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1940
+		folder = {
+			name = infantry_folder
+			position = { x = 1 y = 10 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+
+			modifier = {
+				factor = 10
+				date > "1940.1.1"
+			}
+		}
+	}
+
+	STH_helmet_design_m42 = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m42
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_m45_prototype
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1942
+		folder = {
+			name = infantry_folder
+			position = { x = 1 y = 14 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+
+			modifier = {
+				factor = 10
+				date > "1942.1.1"
+			}
+		}
+	}
+
+	STH_helmet_design_m45_prototype = {
+
+		enable_equipments = {
+			STH_helmet_equipment_m45_prototype
+		}
+
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = infantry_folder
+			position = { x = 1 y = 20 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+
+			modifier = {
+				factor = 10
+				date > "1945.1.1"
+			}
+		}
+	}
+
+	# --- Gladiator (civil air defense) branch, x = 4 ---
+	# Simplified 3-piece -> 2-piece -> 1-piece (the 1-piece version is often
+	# labeled M44).
+
+	STH_helmet_gladiator_program = {
+
+		enable_equipments = {
+			STH_helmet_equipment_gladiator_m38_3pc
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_gladiator_2pc
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1938
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 4 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+		}
+	}
+
+	STH_helmet_design_gladiator_2pc = {
+
+		enable_equipments = {
+			STH_helmet_equipment_gladiator_m38_2pc
+		}
+
+		path = {
+			leads_to_tech = STH_helmet_design_gladiator_1pc
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1940
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 8 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+		}
+	}
+
+	# 1-piece shell, often labeled "M44"
+	STH_helmet_design_gladiator_1pc = {
+
+		enable_equipments = {
+			STH_helmet_equipment_gladiator_m38_1pc
+		}
+
+		research_cost = 1
+		start_year = 1944
+		folder = {
+			name = infantry_folder
+			position = { x = 4 y = 16 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 0.5
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+		}
+	}
+
+	# --- Volkssturm emergency stopgap, x = 5 (vanilla-free row) - standalone,
+	# no prerequisite, since it's just a scavenge-everything conversion
+	# target rather than a real design.
+
+	STH_helmet_design_volkssturm = {
+
+		enable_equipments = {
+			STH_helmet_equipment_volkssturm
+		}
+
+		research_cost = 1
+		start_year = 1944
+		folder = {
+			name = infantry_folder
+			position = { x = 5 y = 16 }
+		}
+
+		categories = {
+			STH_helmet_research
+		}
+
+		ai_will_do = {
+			factor = 0.3
+
+			modifier = {
+				factor = 10
+				tag = GER
+			}
+		}
+	}
+
+}

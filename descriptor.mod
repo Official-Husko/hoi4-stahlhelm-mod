@@ -4,6 +4,7 @@ tags={
 	"Gameplay"
 	"Technologies"
 	"Military"
+	"Graphics"
 }
-name="Stahlhelm - German Helmet Production"
+name="Stahlhelm - Helmet Production Addon"
 supported_version="*"

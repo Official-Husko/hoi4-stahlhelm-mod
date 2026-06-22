@@ -1,0 +1,516 @@
+# All German WW2 helmet equipment
+
+equipments = {
+
+	STH_helmet_equipment = {
+		year = 1916
+
+		is_archetype = yes
+		picture = STH_archetype_helmet_equipment
+		is_buildable = no
+		type = {
+			infantry
+			support
+		}
+		group_by = archetype
+
+		interface_category = interface_category_land
+
+		upgrades = {
+
+
+		}
+
+		is_convertable = yes
+
+		active = yes
+
+		#Misc Abilities
+		reliability = 0.85
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 2
+		breakthrough = 0
+		hardness = 0
+		armor_value = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+
+		build_cost_ic = 0.1
+		resources = {
+			steel = 1
+		}
+
+	}
+
+	# --- Outdated tier (pre-1936 legacy stock) ---
+	# Hand-finished WW1-era construction, more expensive than the WW2 line
+	# despite being weaker - the M35 stamping process is what made helmets
+	# both better AND cheaper to mass-produce.
+
+	STH_helmet_equipment_m16 = {
+		year = 1916
+
+		archetype = STH_helmet_equipment
+		active = yes
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m16
+		}
+
+		defense = 2
+		reliability = 0.7
+
+		build_cost_ic = 0.14
+	}
+
+	STH_helmet_equipment_m17 = {
+		year = 1917
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m16
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m16
+			STH_helmet_equipment_m17
+		}
+
+		defense = 2.2
+		reliability = 0.72
+
+		build_cost_ic = 0.14
+	}
+
+	STH_helmet_equipment_m18 = {
+		year = 1918
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m17
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m16
+			STH_helmet_equipment_m17
+			STH_helmet_equipment_m18
+		}
+
+		defense = 2.4
+		reliability = 0.74
+
+		build_cost_ic = 0.12
+	}
+
+	# Production-defect output only, never directly researched - vent lug
+	# holes missing from the shell, a quality-control miss rather than a
+	# deliberate variant.
+	STH_helmet_equipment_m18_ventless = {
+		year = 1918
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m18
+		is_buildable = no
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m18
+			STH_helmet_equipment_m18_ventless
+		}
+
+		defense = 2
+		reliability = 0.55
+
+		build_cost_ic = 0.12
+	}
+
+	# M18 "Ear Cut" - cutaway flared sides for better hearing
+	STH_helmet_equipment_m18ec = {
+		year = 1918
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m18
+		priority = 01
+		visual_level = 0
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m16
+			STH_helmet_equipment_m17
+			STH_helmet_equipment_m18
+			STH_helmet_equipment_m18ec
+		}
+
+		defense = 2.5
+		reliability = 0.75
+
+		build_cost_ic = 0.12
+	}
+
+	# visual_level = 1 (matching M35) rather than 0 - keeps M34 out of the
+	# "outdated" bucket the engine auto-flags for older designs once a newer
+	# one in the same line is unlocked, since M34 is meant to read as a
+	# distinct, still-current interwar pattern rather than WWI-era surplus.
+	STH_helmet_equipment_m34 = {
+		year = 1934
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m18ec
+		priority = 02
+		visual_level = 1
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m16
+			STH_helmet_equipment_m17
+			STH_helmet_equipment_m18
+			STH_helmet_equipment_m18ec
+			STH_helmet_equipment_m34
+		}
+
+		defense = 2.8
+		reliability = 0.78
+
+		build_cost_ic = 0.13
+	}
+
+	# --- Main combat line ---
+	# M35 (best quality, priciest) -> M40 (a bit cheaper) -> M42 (cheapest,
+	# worst) -> M45 Prototype (cheaper still, worst of all, 1945 collapse-era).
+
+	STH_helmet_equipment_m35 = {
+		year = 1936
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m34
+		priority = 10
+		visual_level = 1
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m16
+			STH_helmet_equipment_m17
+			STH_helmet_equipment_m18
+			STH_helmet_equipment_m18ec
+			STH_helmet_equipment_m34
+			STH_helmet_equipment_m35
+		}
+
+		defense = 4.2
+		reliability = 0.88
+
+		build_cost_ic = 0.2
+	}
+
+	# Early paratrooper trial pattern - preceded the refined M38, never
+	# issued at scale
+	STH_helmet_equipment_m37 = {
+		year = 1937
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m35
+		priority = 07
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m35
+			STH_helmet_equipment_m37
+		}
+
+		defense = 3.5
+		reliability = 0.8
+
+		build_cost_ic = 0.19
+	}
+
+	# Paratrooper pattern - lower profile, no brim, more expensive liner -
+	# the refined, mass-issued successor to the M37 trial pattern
+	STH_helmet_equipment_m38 = {
+		year = 1938
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m37
+		priority = 08
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m35
+			STH_helmet_equipment_m37
+			STH_helmet_equipment_m38
+		}
+
+		defense = 3.8
+		reliability = 0.85
+
+		build_cost_ic = 0.18
+	}
+
+	# Simplified stamping, rolled edge dropped
+	STH_helmet_equipment_m40 = {
+		year = 1940
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m35
+		priority = 10
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m35
+			STH_helmet_equipment_m38
+			STH_helmet_equipment_m40
+		}
+
+		defense = 4
+		reliability = 0.85
+
+		build_cost_ic = 0.17
+	}
+
+	# Further simplified, no rolled edge, lower-grade steel
+	STH_helmet_equipment_m42 = {
+		year = 1942
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m40
+		priority = 10
+		visual_level = 3
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m35
+			STH_helmet_equipment_m38
+			STH_helmet_equipment_m40
+			STH_helmet_equipment_m42
+		}
+
+		defense = 3.6
+		reliability = 0.78
+
+		build_cost_ic = 0.12
+	}
+
+	# Late-war one-piece simplified shell, rushed into service as the war
+	# economy collapsed - cheapest and worst-protecting of the line.
+	STH_helmet_equipment_m45_prototype = {
+		year = 1945
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m42
+		priority = 10
+		visual_level = 4
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m35
+			STH_helmet_equipment_m38
+			STH_helmet_equipment_m40
+			STH_helmet_equipment_m42
+			STH_helmet_equipment_m45_prototype
+		}
+
+		defense = 3.2
+		reliability = 0.65
+
+		build_cost_ic = 0.09
+	}
+
+	# --- Luftschutz "Gladiator" branch (civil air defense) ---
+	# Same M38 Gladiator pattern, simplified across the war from 3-piece to
+	# 2-piece to a 1-piece shell (the 1-piece version is often labeled M44).
+
+	STH_helmet_equipment_gladiator_m38_3pc = {
+		year = 1938
+
+		archetype = STH_helmet_equipment
+		priority = 06
+		visual_level = 1
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_gladiator_m38_3pc
+		}
+
+		defense = 2.5
+		reliability = 0.85
+
+		build_cost_ic = 0.09
+	}
+
+	STH_helmet_equipment_gladiator_m38_2pc = {
+		year = 1940
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_gladiator_m38_3pc
+		priority = 06
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_gladiator_m38_3pc
+			STH_helmet_equipment_gladiator_m38_2pc
+		}
+
+		defense = 2.6
+		reliability = 0.84
+
+		build_cost_ic = 0.075
+	}
+
+	# 1-piece shell, often labeled "M44"
+	STH_helmet_equipment_gladiator_m38_1pc = {
+		year = 1944
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_gladiator_m38_2pc
+		priority = 06
+		visual_level = 3
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_gladiator_m38_3pc
+			STH_helmet_equipment_gladiator_m38_2pc
+			STH_helmet_equipment_gladiator_m38_1pc
+		}
+
+		defense = 2.7
+		reliability = 0.82
+
+		build_cost_ic = 0.06
+	}
+
+	# --- Volkssturm emergency stopgap (1944) ---
+	# The national militia took whatever was on hand - old WW1 stock,
+	# the full WW2 line, even civil-defense Gladiator helmets - so it can
+	# convert from literally every other variant.
+
+	STH_helmet_equipment_volkssturm = {
+		year = 1944
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m42
+		priority = 04
+		visual_level = 3
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m16
+			STH_helmet_equipment_m17
+			STH_helmet_equipment_m18
+			STH_helmet_equipment_m18ec
+			STH_helmet_equipment_m34
+			STH_helmet_equipment_m35
+			STH_helmet_equipment_m37
+			STH_helmet_equipment_m38
+			STH_helmet_equipment_m40
+			STH_helmet_equipment_m42
+			STH_helmet_equipment_m45_prototype
+			STH_helmet_equipment_gladiator_m38_3pc
+			STH_helmet_equipment_gladiator_m38_2pc
+			STH_helmet_equipment_gladiator_m38_1pc
+			STH_helmet_equipment_volkssturm
+		}
+
+		defense = 2
+		reliability = 0.55
+
+		build_cost_ic = 0.05
+	}
+
+	# --- Beaded variants: production-defect output only, never directly researched ---
+
+	STH_helmet_equipment_m35_beaded = {
+		year = 1936
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m35
+		is_buildable = no
+		priority = 01
+		visual_level = 1
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m35
+			STH_helmet_equipment_m35_beaded
+		}
+
+		defense = 3.5
+		reliability = 0.6
+
+		build_cost_ic = 0.2
+	}
+
+	STH_helmet_equipment_m40_beaded = {
+		year = 1940
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m40
+		is_buildable = no
+		priority = 01
+		visual_level = 2
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m40
+			STH_helmet_equipment_m40_beaded
+		}
+
+		defense = 3.3
+		reliability = 0.62
+
+		build_cost_ic = 0.17
+	}
+
+	STH_helmet_equipment_m42_beaded = {
+		year = 1942
+
+		archetype = STH_helmet_equipment
+		parent = STH_helmet_equipment_m42
+		is_buildable = no
+		priority = 01
+		visual_level = 3
+
+		is_convertable = yes
+
+		can_convert_from = {
+			STH_helmet_equipment_m42
+			STH_helmet_equipment_m42_beaded
+		}
+
+		defense = 3
+		reliability = 0.6
+
+		build_cost_ic = 0.12
+	}
+
+}

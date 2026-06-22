@@ -1,0 +1,3 @@
+technology_categories = {
+	STH_helmet_research
+}

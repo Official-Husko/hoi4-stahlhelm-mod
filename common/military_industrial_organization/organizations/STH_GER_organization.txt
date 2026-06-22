@@ -1,0 +1,285 @@
+##########################################
+######## German Helmet Manufacturers ####
+##########################################
+# Self-contained (no `include`) rather than cloning generic_support_equipment_organization,
+# since that template's traits are hardcoded `limit_to_equipment_type = { support_equipment }`
+# and would be inert here - we only deal in STH_helmet_equipment.
+
+STH_GER_et_organization = {
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+
+	allowed = {
+		tag = GER
+	}
+
+	available = {
+		always = yes
+	}
+
+	equipment_type = { STH_helmet_equipment }
+	research_categories = { STH_helmet_research }
+
+	tree_header_text = {
+		text = mio_header_design_and_production
+		x = 1
+	}
+
+	initial_trait = {
+		name = STH_GER_et_initial_trait
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_et_trait_mass_production
+		name = STH_GER_et_trait_mass_production
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		position = { x = 0 y = 0 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_et_trait_standardized_tooling
+		name = STH_GER_et_trait_standardized_tooling
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = 0 y = 1 }
+		relative_position_id = STH_GER_et_trait_mass_production
+		all_parents = { STH_GER_et_trait_mass_production }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.01
+		}
+	}
+}
+
+STH_GER_q_organization = {
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		tag = GER
+	}
+
+	available = {
+		always = yes
+	}
+
+	equipment_type = { STH_helmet_equipment }
+	research_categories = { STH_helmet_research }
+
+	tree_header_text = {
+		text = mio_header_design_and_production
+		x = 1
+	}
+
+	initial_trait = {
+		name = STH_GER_q_initial_trait
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_q_trait_precision_stamping
+		name = STH_GER_q_trait_precision_stamping
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 0 y = 0 }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_q_trait_quality_control
+		name = STH_GER_q_trait_quality_control
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x = 0 y = 1 }
+		relative_position_id = STH_GER_q_trait_precision_stamping
+		all_parents = { STH_GER_q_trait_precision_stamping }
+
+		equipment_bonus = {
+			reliability = 0.03
+			defense = 0.05
+		}
+	}
+}
+
+STH_GER_ef_organization = {
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+
+	allowed = {
+		tag = GER
+	}
+
+	available = {
+		always = yes
+	}
+
+	equipment_type = { STH_helmet_equipment }
+	research_categories = { STH_helmet_research }
+
+	tree_header_text = {
+		text = mio_header_design_and_production
+		x = 1
+	}
+
+	initial_trait = {
+		name = STH_GER_ef_initial_trait
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_ef_trait_lacquer_finish
+		name = STH_GER_ef_trait_lacquer_finish
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 0 y = 0 }
+
+		equipment_bonus = {
+			reliability = 0.04
+		}
+	}
+
+	trait = {
+		token = STH_GER_ef_trait_corrosion_resistant_coating
+		name = STH_GER_ef_trait_corrosion_resistant_coating
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x = 0 y = 1 }
+		relative_position_id = STH_GER_ef_trait_lacquer_finish
+		all_parents = { STH_GER_ef_trait_lacquer_finish }
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+	}
+}
+
+STH_GER_ns_organization = {
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+
+	allowed = {
+		tag = GER
+	}
+
+	available = {
+		always = yes
+	}
+
+	equipment_type = { STH_helmet_equipment }
+	research_categories = { STH_helmet_research }
+
+	tree_header_text = {
+		text = mio_header_design_and_production
+		x = 1
+	}
+
+	initial_trait = {
+		name = STH_GER_ns_initial_trait
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_ns_trait_nickel_alloy_shell
+		name = STH_GER_ns_trait_nickel_alloy_shell
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x = 0 y = 0 }
+
+		equipment_bonus = {
+			defense = 0.08
+		}
+	}
+
+	trait = {
+		token = STH_GER_ns_trait_hardened_steel
+		name = STH_GER_ns_trait_hardened_steel
+		icon = GFX_generic_mio_trait_icon_defense
+
+		position = { x = 0 y = 1 }
+		relative_position_id = STH_GER_ns_trait_nickel_alloy_shell
+		all_parents = { STH_GER_ns_trait_nickel_alloy_shell }
+
+		equipment_bonus = {
+			defense = 0.04
+		}
+
+		production_bonus = {
+			production_cost_factor = 0.02
+		}
+	}
+}
+
+STH_GER_se_organization = {
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
+
+	allowed = {
+		tag = GER
+	}
+
+	available = {
+		always = yes
+	}
+
+	equipment_type = { STH_helmet_equipment }
+	research_categories = { STH_helmet_research }
+
+	tree_header_text = {
+		text = mio_header_design_and_production
+		x = 1
+	}
+
+	initial_trait = {
+		name = STH_GER_se_initial_trait
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_se_trait_high_volume_stanzwerk
+		name = STH_GER_se_trait_high_volume_stanzwerk
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = 0 y = 0 }
+
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = STH_GER_se_trait_efficient_enamel_line
+		name = STH_GER_se_trait_efficient_enamel_line
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = 0 y = 1 }
+		relative_position_id = STH_GER_se_trait_high_volume_stanzwerk
+		all_parents = { STH_GER_se_trait_high_volume_stanzwerk }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.04
+		}
+	}
+}
