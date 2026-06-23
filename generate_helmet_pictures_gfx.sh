@@ -35,11 +35,32 @@
 #      equally-weighted pools the player can browse/choose between in the
 #      designer's icon picker (see interface/equipmentdesigner/
 #      STH_helmet_equipment.gui for the designer layout itself).
+#   5. Seeds localisation/english/STH_l_english.yml with a placeholder
+#      STH_helmet_equipment_<suffix> line for any helmet folder that doesn't
+#      have one yet, derived from the folder name (e.g. m45_prototype ->
+#      "Stahlhelm M45 Prototype #N") so no helmet is left without a display
+#      name. The trailing " #N" flags it as a placeholder still needing a
+#      real name (and _short/_desc, which this step doesn't generate) - N
+#      keeps counting up from whatever placeholder numbers already exist in
+#      the file. Existing lines, placeholder or hand-written, are never
+#      touched.
+#   6. Seeds localisation/english/STH_helmet_icon_names_l_english.yml with
+#      one entry per icon, keyed by its exact GFX_ sprite name - the
+#      designer's icon-picker tooltip has no field of its own to set a
+#      name, it falls back to displaying the raw, untranslated loc key
+#      (i.e. the literal "GFX_STH_helmet_equipment_m35_01" sprite name) when
+#      no translation exists, which is the "internal name" you see in the
+#      picker. This step only ever appends missing keys with a generic
+#      default ("<Helmet Name> #N") - it never touches a key that's already
+#      in the file, so you can freely hand-edit any entry (e.g. to "M35
+#      Normandy Camo") and reruns won't overwrite your choice.
 #
 # Run this any time you add, replace, remove, or rename files under that
 # folder - the resize, the DDS conversion, the equipment-pictures .gfx
 # file, and the icon-picker registry are all fully derived from what's on
-# disk, so none of them need to be hand-edited.
+# disk, so none of them need to be hand-edited. The loc placeholders (steps
+# 5 and 6) are the one exception - they're seeded automatically but meant
+# to be hand-edited afterward.
 set -euo pipefail
 
 TARGET_WIDTH=164
@@ -55,6 +76,9 @@ if [ ! -d "$HELMETS_DIR" ]; then
 fi
 
 # --- Step 1: resize/pad PNGs to a fixed canvas, then convert to DDS ---
+# The originals under $HELMETS_DIR are never touched - resizing happens on
+# copies in a temp scratch dir, and only the resulting .dds files are copied
+# back next to the (untouched) source PNGs.
 
 shopt -s nullglob globstar
 pngs=("$HELMETS_DIR"/**/*.png)
@@ -72,22 +96,42 @@ else
         exit 1
     fi
 
+    TMP_DIR="$(mktemp -d)"
+    trap 'rm -rf "$TMP_DIR"' EXIT
+
     for f in "${pngs[@]}"; do
+        rel="${f#"$HELMETS_DIR"/}"
+        tmp_f="$TMP_DIR/$rel"
+        mkdir -p "$(dirname "$tmp_f")"
         magick "$f" \
             -resize "${TARGET_WIDTH}x${TARGET_HEIGHT}" \
             -background none \
             -gravity center \
             -extent "${TARGET_WIDTH}x${TARGET_HEIGHT}" \
-            "$f"
+            "$tmp_f"
     done
-    echo "Resized ${#pngs[@]} PNG file(s) to ${TARGET_WIDTH}x${TARGET_HEIGHT}."
+    echo "Resized ${#pngs[@]} PNG file(s) to ${TARGET_WIDTH}x${TARGET_HEIGHT} (originals untouched)."
 
     todds \
         --format BC3 \
         --fix-size \
         --overwrite \
         --progress \
-        "$HELMETS_DIR"
+        "$TMP_DIR"
+
+    shopt -s nullglob globstar
+    tmp_dds=("$TMP_DIR"/**/*.dds)
+    shopt -u nullglob globstar
+
+    for f in "${tmp_dds[@]}"; do
+        rel="${f#"$TMP_DIR"/}"
+        dest="$HELMETS_DIR/$rel"
+        mkdir -p "$(dirname "$dest")"
+        cp "$f" "$dest"
+    done
+
+    rm -rf "$TMP_DIR"
+    trap - EXIT
 
     echo "Converted ${#pngs[@]} PNG file(s) under $HELMETS_DIR to DDS."
 fi
@@ -189,3 +233,78 @@ mkdir -p "$(dirname "$GRAPHIC_DB_FILE")"
 
 pool_count=$(grep -c "pool = {" "$GRAPHIC_DB_FILE")
 echo "Wrote $pool_count icon pool entries to $GRAPHIC_DB_FILE"
+
+# --- Step 4: seed missing base helmet-name loc lines (hand-edit afterward, never overwritten) ---
+# If a helmet folder has no STH_helmet_equipment_<suffix> line yet in the main loc
+# file, append a placeholder derived from the folder name (e.g. m45_prototype ->
+# "Stahlhelm M45 Prototype") so nothing is left nameless. The trailing " #N" marks
+# it as a placeholder still needing a real name/description - N keeps counting up
+# from whatever's already in the file, so re-runs never reuse or collide with a
+# number you've already seen. Existing lines (placeholder or hand-written) are
+# never modified or removed.
+
+BASE_LOC_FILE="$MOD_ROOT/localisation/english/STH_l_english.yml"
+
+last_num="$(grep -oP '(?<= #)[0-9]+(?=")' "$BASE_LOC_FILE" 2>/dev/null | sort -n | tail -1)" || true
+[ -z "$last_num" ] && last_num=0
+
+new_base_count=0
+for dir in "$HELMETS_DIR"/*/; do
+    [ -d "$dir" ] || continue
+    suffix="$(basename "$dir")"
+
+    if grep -q "^ STH_helmet_equipment_${suffix}:0 \"" "$BASE_LOC_FILE"; then
+        continue
+    fi
+
+    title="$(echo "$suffix" | tr '_' ' ' | sed -E 's/(^| )([a-z])/\1\u\2/g')"
+    last_num=$((last_num + 1))
+    printf ' STH_helmet_equipment_%s:0 "Stahlhelm %s #%d"\n' "$suffix" "$title" "$last_num" >> "$BASE_LOC_FILE"
+    new_base_count=$((new_base_count + 1))
+done
+
+echo "Added $new_base_count placeholder helmet name(s) to $BASE_LOC_FILE (existing lines left untouched - edit freely)."
+
+# --- Step 5: seed per-icon display names (hand-edit afterward, never overwritten) ---
+
+ICON_NAMES_FILE="$MOD_ROOT/localisation/english/STH_helmet_icon_names_l_english.yml"
+mkdir -p "$(dirname "$ICON_NAMES_FILE")"
+
+if [ ! -f "$ICON_NAMES_FILE" ]; then
+    # HOI4 loc files must be UTF-8 with a BOM, or the game logs an error (and may
+    # crash with 0xC0000005 if the file's l_english: header was never seen with one).
+    printf '\xEF\xBB\xBFl_english:\n' > "$ICON_NAMES_FILE"
+fi
+
+new_count=0
+for dir in "$HELMETS_DIR"/*/; do
+    [ -d "$dir" ] || continue
+    suffix="$(basename "$dir")"
+
+    shopt -s nullglob
+    files=("$dir"*.dds)
+    shopt -u nullglob
+    [ ${#files[@]} -eq 0 ] && continue
+
+    base_name="$(grep -oP "(?<=^ STH_helmet_equipment_${suffix}:0 \")[^\"]+" "$BASE_LOC_FILE" 2>/dev/null || true)"
+    [ -z "$base_name" ] && base_name="$suffix"
+
+    sorted=()
+    while IFS= read -r line; do
+        sorted+=("$line")
+    done < <(printf '%s\n' "${files[@]}" | sort)
+
+    for f in "${sorted[@]}"; do
+        fname="$(basename "$f")"
+        name_no_ext="${fname%.dds}"
+        key="GFX_STH_helmet_equipment_${name_no_ext}"
+        num="${name_no_ext##*_}"
+
+        if ! grep -q "^ ${key}:" "$ICON_NAMES_FILE"; then
+            printf ' %s:0 "%s #%s"\n' "$key" "$base_name" "$num" >> "$ICON_NAMES_FILE"
+            new_count=$((new_count + 1))
+        fi
+    done
+done
+
+echo "Seeded $new_count new icon display-name localisation entries in $ICON_NAMES_FILE (existing entries left untouched - edit freely)."

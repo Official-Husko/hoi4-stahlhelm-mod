@@ -1,101 +1,185 @@
 ﻿l_german:
- # --- Stahlhelm-Ausrüstung ---
- STH_helmet_equipment:0 "Stahlhelm"
- STH_helmet_equipment_short:0 "Helm"
- STH_helmet_equipment_desc:0 "Stahlhelme für Infanterie zum Kopfschutz."
+ #================================================================
+ # HELM-AUSRÜSTUNG
+ #================================================================
 
- STH_helmet_equipment_m16:0 "Stahlhelm M16"
- STH_helmet_equipment_m16_short:0 "M16"
- STH_helmet_equipment_m17:0 "Stahlhelm M17"
- STH_helmet_equipment_m17_short:0 "M17"
- STH_helmet_equipment_m18:0 "Stahlhelm M18"
- STH_helmet_equipment_m18_short:0 "M18"
- STH_helmet_equipment_m18_ventless:0 "Stahlhelm M18 ohne Lüftungsöse"
- STH_helmet_equipment_m18_ventless_short:0 "M18 (ohne Öse)"
- STH_helmet_equipment_m18_ventless_desc:0 "Ein Produktionsfehler: die Lüftungslöcher wurden nicht gestanzt. Weiterhin verwendbar."
- STH_helmet_equipment_m18ec:0 "Stahlhelm M18 (Ohrenausschnitt)"
- STH_helmet_equipment_m18ec_short:0 "M18 OA"
- STH_helmet_equipment_m34:0 "Stahlhelm M34 Zivil"
- STH_helmet_equipment_m34_short:0 "M34"
+ # Allgemeiner Helm
+ STH_helmet_equipment: "Helm"
+ STH_helmet_equipment_short: "Helm"
+ STH_helmet_equipment_desc: "Stahlhelme für Infanterie und andere Feldtruppen, vor allem zum Schutz gegen Granatsplitter, Trümmer und Aufprallverletzungen auf dem Schlachtfeld, weniger gegen direkten Gewehrbeschuss."
 
- STH_helmet_equipment_m35:0 "Stahlhelm M35"
- STH_helmet_equipment_m35_short:0 "M35"
- STH_helmet_equipment_m35_desc:0 "Der 1935 eingeführte Standard-Stahlhelm, der die Muster aus dem Ersten Weltkrieg durch eine leichtere, besser schützende Schale ersetzte."
- STH_helmet_equipment_m37:0 "Fallschirmhelm M37"
- STH_helmet_equipment_m37_short:0 "M37"
- STH_helmet_equipment_m37_desc:0 "Ein frühes, flaches Versuchsmuster für Fallschirmjäger, nie in großer Stückzahl ausgegeben - im Folgejahr durch den überarbeiteten M38 abgelöst."
- STH_helmet_equipment_m38:0 "Fallschirmhelm M38"
- STH_helmet_equipment_m38_short:0 "M38"
- STH_helmet_equipment_m38_desc:0 "Ein flaches Muster ohne Helmrand mit Vierpunkt-Kinnriemen, entwickelt für Fallschirmjäger. Der überarbeitete, in großer Stückzahl ausgegebene Nachfolger des M37-Versuchsmusters."
- STH_helmet_equipment_m40:0 "Stahlhelm M40"
- STH_helmet_equipment_m40_short:0 "M40"
- STH_helmet_equipment_m40_desc:0 "Eine vereinfachte Version des M35 mit einteiliger gestanzter Lüftungsöse zur Erleichterung der Kriegsproduktion."
- STH_helmet_equipment_m42:0 "Stahlhelm M42"
- STH_helmet_equipment_m42_short:0 "M42"
- STH_helmet_equipment_m42_desc:0 "Weiter vereinfachtes Produktionsmuster ohne gerollten Rand, um Material und Bearbeitungszeit zu sparen."
- STH_helmet_equipment_m45_prototype:0 "Stahlhelm M45 Prototyp"
- STH_helmet_equipment_m45_prototype_short:0 "M45 Prototyp"
- STH_helmet_equipment_m45_prototype_desc:0 "Eine überstürzt eingeführte späte Kriegsschale, am billigsten und am schlechtesten schützend, während die deutsche Kriegswirtschaft zusammenbrach."
+ # Stahlhelm M16
+ STH_helmet_equipment_m16: "Stahlhelm M16"
+ STH_helmet_equipment_m16_short: "M16"
+ STH_helmet_equipment_m16_desc: "Deutschlands erster in grosser Zahl ausgegebener Stahlhelm, im Ersten Weltkrieg als Ersatz für Lederkopfbedeckungen an der Front eingeführt. Der tiefe Nackenschutz und die vorspringenden Lüftungsbolzen boten starken Splitterschutz, auch wenn Futter und Kinnriemensystem noch deutlich von älteren Pickelhauben-Beschlägen beeinflusst waren."
+ STH_helmet_program: "Stahlhelm M16"
+ STH_helmet_program_desc: "Beginn der Produktion des Stahlhelms M16, des ersten deutschen Stahlhelms in Massenausgabe. Seine tiefgezogene Glocke bietet weit besseren Splitterschutz als Lederkopfbedeckungen, allerdings auf Kosten von Gewicht, Geräuschentwicklung und eingeschränktem Hören."
 
- STH_helmet_equipment_gladiator_m38_3pc:0 "Gladiator M38, 3-teilig"
- STH_helmet_equipment_gladiator_m38_3pc_short:0 "Gladiator (3-tlg)"
- STH_helmet_equipment_gladiator_m38_3pc_desc:0 "Ziviler Luftschutzhelm für Luftschutzwarte und anderes Heimatfront-Personal, aus 3 gestanzten Teilen gefertigt."
- STH_helmet_equipment_gladiator_m38_2pc:0 "Gladiator M38, 2-teilig"
- STH_helmet_equipment_gladiator_m38_2pc_short:0 "Gladiator (2-tlg)"
- STH_helmet_equipment_gladiator_m38_2pc_desc:0 "Eine vereinfachte 2-teilige Version des Gladiator-Luftschutzhelms, günstiger zu stanzen."
- STH_helmet_equipment_gladiator_m38_1pc:0 "Gladiator M38, 1-teilig (M44)"
- STH_helmet_equipment_gladiator_m38_1pc_short:0 "Gladiator (1-tlg/M44)"
- STH_helmet_equipment_gladiator_m38_1pc_desc:0 "Die letzte, einteilige Vereinfachung des Gladiator-Luftschutzhelms, oft als M44 bezeichnet."
+ # Stahlhelm M17
+ STH_helmet_equipment_m17: "Stahlhelm M17"
+ STH_helmet_equipment_m17_short: "M17"
+ STH_helmet_equipment_m17_desc: "Der M17 war keine neue Helmglocke, sondern ein M16 mit verbessertem stählernem Futterring von 1917. Die äussere Form blieb gleich, während die Innenausstattung unter Grabenbedingungen deutlich haltbarer wurde."
+ STH_helmet_design_m17: "Stahlhelm M17"
+ STH_helmet_design_m17_desc: "Einführung des stählernen Futterrings von 1917 für die M16-Glocke. Dies ist eine praktische Dienstverbesserung statt eines neuen Helmkörpers und ersetzt den schwächeren ledernen Futterring durch eine haltbarere Metallausführung."
 
- STH_helmet_equipment_volkssturm:0 "Volkssturm-Stahlhelm-Wiederausgabe"
- STH_helmet_equipment_volkssturm_short:0 "Volkssturm"
- STH_helmet_equipment_volkssturm_desc:0 "Eine Notlösung für den Volkssturm, zusammengestellt aus allem verfügbaren Bestand - alt oder neu, militärisch oder zivil."
+ # Stahlhelm M18
+ STH_helmet_equipment_m18: "Stahlhelm M18"
+ STH_helmet_equipment_m18_short: "M18"
+ STH_helmet_equipment_m18_desc: "Eine späte Weiterentwicklung des M16/M17 aus dem Ersten Weltkrieg, vor allem erkennbar an der neuen Kinnriemenbefestigung am Futter statt an den schalenmontierten M1891-Knöpfen. Er behielt das vertraute tiefe Stahlhelmprofil bei, vereinfachte aber die Aufhängung des Soldaten."
+ STH_helmet_design_m18: "Stahlhelm M18"
+ STH_helmet_design_m18_desc: "Einführung des am Futter befestigten Kinnriemensystems des M18. Die Verlegung der Kinnriemenbefestigung weg von den alten Schalenknöpfen modernisiert die Aufhängung und beseitigt eine Schwachstelle, die noch von Vorkriegsbeschlägen stammte."
 
- STH_helmet_equipment_m35_beaded:0 "Perlrand-Helm M35"
- STH_helmet_equipment_m35_beaded_short:0 "M35 (Perlrand)"
- STH_helmet_equipment_m35_beaded_desc:0 "Ein Produktionsfehler: ein Perlrand wurde angebracht, wo er nicht sein sollte. Weiterhin verwendbar."
- STH_helmet_equipment_m40_beaded:0 "Perlrand-Helm M40"
- STH_helmet_equipment_m40_beaded_short:0 "M40 (Perlrand)"
- STH_helmet_equipment_m42_beaded:0 "Perlrand-Helm M42"
- STH_helmet_equipment_m42_beaded_short:0 "M42 (Perlrand)"
+ # Ventilloser M18
+ STH_helmet_equipment_m18_ventless: "Ventilloser M18-Helm"
+ STH_helmet_equipment_m18_ventless_short: "M18 (ventillos)"
+ STH_helmet_equipment_m18_ventless_desc: "Eine ungewöhnliche ventillose oder unfertig wirkende M18-Glocke ohne die üblichen seitlichen Lüftungsbeschläge. Solche Helme sind selten und eher als Kuriositäten, Überarbeitungen oder Produktionsanomalien zu verstehen, nicht als reguläres Kampfmuster."
 
- # --- Helm-Technologien ---
- STH_helmet_program:0 "Stahlhelm M16"
- STH_helmet_design_m17:0 "Stahlhelm M17"
- STH_helmet_design_m18:0 "Stahlhelm M18"
- STH_helmet_design_m35:0 "Helmdesign: M35"
- STH_helmet_design_m37:0 "Helmdesign: M37 (Fallschirmjäger-Versuchsmuster)"
- STH_helmet_design_m38:0 "Helmdesign: M38 (Fallschirmjäger)"
- STH_helmet_design_m40:0 "Helmdesign: M40"
- STH_helmet_design_m42:0 "Helmdesign: M42"
- STH_helmet_design_m45_prototype:0 "Helmdesign: M45 Prototyp"
- STH_helmet_gladiator_program:0 "Gladiator-Helm-Programm"
- STH_helmet_design_gladiator_2pc:0 "Gladiator-Helm: 2-teilig"
- STH_helmet_design_gladiator_1pc:0 "Gladiator-Helm: 1-teilig (M44)"
- STH_helmet_design_volkssturm:0 "Volkssturm-Stahlhelm-Wiederausgabe"
+ # M18 Ohrenausschnitt
+ STH_helmet_equipment_m18ec: "Stahlhelm M18 (Ohrenausschnitt)"
+ STH_helmet_equipment_m18ec_short: "M18 OA"
+ STH_helmet_equipment_m18ec_desc: "Eine seltene M18-Variante mit halbmondförmigen Ausschnitten an den Ohren. Diese Ausschnitte sollten das Hören verbessern und Echo unter dem tiefen Seitenschutz verringern, nicht speziell Telefonhörer aufnehmen, auch wenn dies eine verbreitete Sammlerbezeichnung nahelegt."
 
- # --- Helm-Hersteller (MIOs) ---
- STH_GER_et_organization:0 "Eisenhüttenwerk Thale"
- STH_GER_et_initial_trait:0 "Inhaber des Original-Helmmusters"
- STH_GER_et_trait_mass_production:0 "Massenproduktionslinien"
- STH_GER_et_trait_standardized_tooling:0 "Standardisierte Werkzeuge"
+ # Stahlhelm M34
+ STH_helmet_equipment_m34: "Stahlhelm M34"
+ STH_helmet_equipment_m34_short: "M34"
+ STH_helmet_equipment_m34_desc: "Ein ziviler und polizeilicher Helmtyp, verbunden mit Feuerwehr, Polizei und anderen nicht-frontnahen Diensten. M34-Helme waren meist leichter als Kampf-Stahlhelme und hatten oft eckige Seitenausschnitte, Sieblochlüftungen, schwarze Lackierung und dienstspezifische Beschläge."
 
- STH_GER_q_organization:0 "F.W. Quist"
- STH_GER_q_initial_trait:0 "Präzisions-Stanzwerk"
- STH_GER_q_trait_precision_stamping:0 "Präzisionsstanzung"
- STH_GER_q_trait_quality_control:0 "Strenge Qualitätskontrolle"
+ # Stahlhelm M35
+ STH_helmet_equipment_m35: "Stahlhelm M35"
+ STH_helmet_equipment_m35_short: "M35"
+ STH_helmet_equipment_m35_desc: "Der 1935 eingeführte deutsche Standard-Stahlhelm, der die Muster aus dem Ersten Weltkrieg durch eine leichtere, kompaktere Glocke mit gebördeltem Rand, separaten eingesetzten Lüftungsbuchsen und M31-Futtersystem ersetzte."
+ STH_helmet_design_m35: "Helmentwurf: M35"
+ STH_helmet_design_m35_desc: "Entwicklung des M35-Kampfhelms: eine kleinere, leichtere Glocke mit gebördeltem Rand, verbessertem Futter, verkürztem Nackenschutz und separat eingesetzten Lüftungsbeschlägen. Er wird zum Grundmuster der deutschen Kampfhelme des Zweiten Weltkriegs."
 
- STH_GER_ef_organization:0 "Emaillierwerke Fulda"
- STH_GER_ef_initial_trait:0 "Spezialisten für Emaillierung"
- STH_GER_ef_trait_lacquer_finish:0 "Lackierte Oberfläche"
- STH_GER_ef_trait_corrosion_resistant_coating:0 "Korrosionsbeständige Beschichtung"
+ # Gebördelter M35 mit Sicke
+ STH_helmet_equipment_m35_beaded: "M35-Helm mit Sicke"
+ STH_helmet_equipment_m35_beaded_short: "M35 (Sicke)"
+ STH_helmet_equipment_m35_beaded_desc: "Eine M35-artige Glocke mit umlaufender Sicke, meist mit Luftschutz oder anderer nicht-frontnaher Verwendung verbunden. Die erhabene Sicke trennte den Helm vom normalen Kampfeinsatz und deutete oft auf eine herabgestufte, überarbeitete oder zivilschutzbezogene Glocke hin."
 
- STH_GER_ns_organization:0 "Vereinigte Deutsche Nickelwerke"
- STH_GER_ns_initial_trait:0 "Nickelstahl-Lieferant"
- STH_GER_ns_trait_nickel_alloy_shell:0 "Nickel-Legierungs-Schale"
- STH_GER_ns_trait_hardened_steel:0 "Härteverfahren für Stahl"
+ # Fallschirmhelm M37
+ STH_helmet_equipment_m37: "Fallschirmhelm M37"
+ STH_helmet_equipment_m37_short: "M37"
+ STH_helmet_equipment_m37_desc: "Ein früher Versuchshelm der Fallschirmjäger, entstanden aus dem Bedarf nach einem sichereren Sprunghelm. Der reduzierte Rand und das flache Profil halfen, Verfangen im Gurtzeug und Landeverletzungen zu vermeiden, doch das Muster blieb selten und wurde bald zum M38 verfeinert."
+ STH_helmet_design_m37: "Helmentwurf: M37 (Fallschirmjäger-Versuch)"
+ STH_helmet_design_m37_desc: "Erprobung eines Helms mit reduziertem Profil für Luftlandetruppen. Der M37 zeigt den Bedarf nach einem eigenen Fallschirmjägerhelm, da Rand und Nackenschutz des normalen Stahlhelms beim Fallschirmsprung gefährlich sein konnten."
 
- STH_GER_se_organization:0 "Sächsische Emaillier- und Stanzwerke"
- STH_GER_se_initial_trait:0 "Hochvolumiges Stanzwerk"
- STH_GER_se_trait_high_volume_stanzwerk:0 "Hochvolumiges Stanzwerk"
- STH_GER_se_trait_efficient_enamel_line:0 "Effiziente Emaillierlinie"
+ # Fallschirmhelm M38
+ STH_helmet_equipment_m38: "Fallschirmhelm M38"
+ STH_helmet_equipment_m38_short: "M38"
+ STH_helmet_equipment_m38_desc: "Der Standardhelm der deutschen Fallschirmjäger, bei dem Schirm und Nackenschutz weggeschnitten wurden, um Hängenbleiben und Landeverletzungen zu verringern. Sein Vierpunkt-Kinnriemen und die kompakte Glocke machten ihn weit geeigneter für Luftlandeoperationen als den normalen Stahlhelm."
+ STH_helmet_design_m38: "Helmentwurf: M38 (Fallschirmjäger)"
+ STH_helmet_design_m38_desc: "Einführung des verfeinerten Fallschirmhelms M38. Seine kompakte Glocke und der sichere Vierpunkt-Kinnriemen machen ihn für Fallschirmoperationen geeignet und begründen das Standardmuster des deutschen Luftlandehelms."
+
+ # Stahlhelm M40
+ STH_helmet_equipment_m40: "Stahlhelm M40"
+ STH_helmet_equipment_m40_short: "M40"
+ STH_helmet_equipment_m40_desc: "Eine kriegsbedingte Vereinfachung des M35. Gesamtform und gebördelter Rand blieben erhalten, doch die separat eingepressten Lüftungsbuchsen wurden durch direkt in die Glocke gestanzte Lüftungen ersetzt."
+ STH_helmet_design_m40: "Helmentwurf: M40"
+ STH_helmet_design_m40_desc: "Vereinfachung der M35-Produktion durch direkt in die Glocke gestanzte Lüftungsöffnungen. Daraus entsteht der M40, äusserlich dem M35 ähnlich, aber in Kriegszeiten leichter in grosser Zahl herzustellen."
+
+ # M40 mit Sicke
+ STH_helmet_equipment_m40_beaded: "M40-Helm mit Sicke"
+ STH_helmet_equipment_m40_beaded_short: "M40 (Sicke)"
+ STH_helmet_equipment_m40_beaded_desc: "Eine M40-artige Glocke mit Sicke, hauptsächlich für Luftschutz und Heimatfrontdienste verwendet. Sie behielt die gestanzten Lüftungen des M40, wurde aber durch die erhabene Sicke gewöhnlich vom Fronteinsatz getrennt."
+
+ # Stahlhelm M42
+ STH_helmet_equipment_m42: "Stahlhelm M42"
+ STH_helmet_equipment_m42_short: "M42"
+ STH_helmet_equipment_m42_desc: "Der letzte reguläre Kampf-Stahlhelm des Krieges. Er behielt die gestanzten Lüftungen des M40 bei, verzichtete aber auf den gebördelten Rand und erhielt so einen ausgestellten Rohabschluss, der Stahl, Werkzeugzeit und Arbeitsaufwand sparte."
+ STH_helmet_design_m42: "Helmentwurf: M42"
+ STH_helmet_design_m42_desc: "Entfernung des gebördelten Randes vom Standard-Kampfhelm zur Schaffung des M42. Der rohe, ausgestellte Rand ist weniger sauber verarbeitet, spart aber Zeit und Material, als der Produktionsdruck am höchsten ist."
+
+ # M42 mit Sicke
+ STH_helmet_equipment_m42_beaded: "M42-Helm mit Sicke"
+ STH_helmet_equipment_m42_beaded_short: "M42 (Sicke)"
+ STH_helmet_equipment_m42_beaded_desc: "Eine M42-artige Glocke mit Rohkante und umlaufender Sicke für Zivilschutz oder herabgestufte Verwendung. Solche Helme zeigen die deutsche Praxis, brauchbare Glocken ausserhalb der normalen Kampfkanäle weiterzuverwenden."
+
+ # Stahlhelm M45 Prototyp
+ STH_helmet_equipment_m45_prototype: "Stahlhelm M45 Prototyp"
+ STH_helmet_equipment_m45_prototype_short: "M45 Prototyp"
+ STH_helmet_equipment_m45_prototype_desc: "Ein spätes experimentelles B/II-artiges Helmprojekt, verbunden mit den Thale-Versuchen. Die flachere, modernere Form versprach Einsparungen bei Material und Arbeit, wurde aber nicht mehr für den Massendienst der Wehrmacht übernommen."
+ STH_helmet_design_m45_prototype: "Helmentwurf: M45 Prototyp"
+ STH_helmet_design_m45_prototype_desc: "Untersuchung des späten B/II-artigen Prototyphelms. Seine modernere ballistische Form und Produktionsersparnis sind vielversprechend, doch logistischer Konservatismus und der Zusammenbruch der deutschen Industrie verhindern die Einführung."
+
+ # Gladiator M38, dreiteilig
+ STH_helmet_equipment_gladiator_m38_3pc: "Gladiator M38, dreiteilig"
+ STH_helmet_equipment_gladiator_m38_3pc_short: "Gladiator (3tlg.)"
+ STH_helmet_equipment_gladiator_m38_3pc_desc: "Ein ziviler Luftschutzhelm für Luftschutzpersonal und andere Dienste der Heimatfront. Das frühe Gladiator-Muster bestand aus drei gestanzten Teilen und trug meist dunkelblaue oder schwarze Lackierung sowie ein Luftschutzabzeichen an der Front."
+ STH_helmet_gladiator_program: "Gladiator-Helmprogramm"
+ STH_helmet_gladiator_program_desc: "Beginn der Produktion von Gladiator-Helmen für den zivilen Luftschutz. Diese Helme schützen Luftschutzwarte, Brandbekämpfungstrupps und anderes Heimatfrontpersonal vor Bombensplittern und herabfallenden Trümmern."
+
+ # Gladiator M38, zweiteilig
+ STH_helmet_equipment_gladiator_m38_2pc: "Gladiator M38, zweiteilig"
+ STH_helmet_equipment_gladiator_m38_2pc_short: "Gladiator (2tlg.)"
+ STH_helmet_equipment_gladiator_m38_2pc_desc: "Ein vereinfachter Luftschutz-Gladiatorhelm mit zweiteilig gestanztem Körper. Er behielt die breite zivile Helmform bei, verringerte aber die Fertigungskomplexität für die Zivilschutzproduktion."
+ STH_helmet_design_gladiator_2pc: "Gladiator-Helm: zweiteilig"
+ STH_helmet_design_gladiator_2pc_desc: "Vereinfachung des zivilen Gladiator-Luftschutzhelms von drei gestanzten Teilen auf zwei. Die Änderung senkt den Arbeitsaufwand und erhält zugleich ausreichenden Schutz für Luftschutz und Heimatfrontdienst."
+
+ # Gladiator M38, einteilig / M44
+ STH_helmet_equipment_gladiator_m38_1pc: "Gladiator M38, einteilig (M44)"
+ STH_helmet_equipment_gladiator_m38_1pc_short: "Gladiator (1tlg./M44)"
+ STH_helmet_equipment_gladiator_m38_1pc_desc: "Die letzte einteilige Vereinfachung des Gladiator-Luftschutzhelms, oft mit dem zivilen M44-Helm verbunden. Sie senkte Kosten und Arbeitsaufwand weiter, wobei späte Helme häufig einfachere Futter und Beschläge erhielten."
+ STH_helmet_design_gladiator_1pc: "Gladiator-Helm: einteilig (M44)"
+ STH_helmet_design_gladiator_1pc_desc: "Einführung der einteiligen Gladiator-Vereinfachung, oft M44 genannt. Späte Materialknappheit erzwingt billigere Glocken, einfachere Futter und schnellere Zivilschutzproduktion."
+
+ # Volkssturm Stahlhelm-Wiederausgabe
+ STH_helmet_equipment_volkssturm: "Volkssturm Stahlhelm-Wiederausgabe"
+ STH_helmet_equipment_volkssturm_short: "Volkssturm"
+ STH_helmet_equipment_volkssturm_desc: "Ein Notbehelfshelm für den Volkssturm, ausgegeben aus allem, was verfügbar war: veraltete Weltkriegsglocken, reguläre Kampfhelme, zivile Luftschutzhelme, Polizeihelme, Beutehelme und aufgearbeitete Ausschussstücke."
+ STH_helmet_design_volkssturm: "Volkssturm Stahlhelm-Wiederausgabe"
+ STH_helmet_design_volkssturm_desc: "Wiederausgabe jedes dienstfähigen Helms an den Volkssturm. Standardisierung weicht der Notverteilung alter, erbeuteter, ziviler, abgelehnter und aufgearbeiteter Helme."
+
+
+ #================================================================
+ # HELM-HERSTELLER
+ #================================================================
+
+ # Eisenhüttenwerk Thale
+ STH_GER_et_organization: "Eisenhüttenwerk Thale"
+ STH_GER_et_organization_desc: "Eisenhüttenwerk Thale war der zentrale Name in der deutschen Stahlhelm-Entwicklung, verbunden mit der Helmglockenproduktion des Ersten Weltkriegs und der M35-Familie der Kampfhelme des Zweiten Weltkriegs."
+ STH_GER_et_initial_trait: "Inhaber des ursprünglichen Helmmusters"
+ STH_GER_et_initial_trait_desc: "Thales Erfahrung mit den ursprünglichen Stahlhelm-Mustern bildet eine starke Grundlage für Entwurf und Werkzeugbau standardisierter Kampfglocken."
+ STH_GER_et_trait_mass_production: "Massenproduktionslinien"
+ STH_GER_et_trait_mass_production_desc: "Grosse Presskapazität und etablierte Helmwerkzeuge ermöglichen Thale die Fertigung standardisierter Glocken in hoher Stückzahl."
+ STH_GER_et_trait_standardized_tooling: "Standardisierte Werkzeuge"
+ STH_GER_et_trait_standardized_tooling_desc: "Standardisierte Matrizen, Lehren und Prüfverfahren verringern Unterschiede zwischen Chargen und beschleunigen die Abnahme."
+
+ # F.W. Quist
+ STH_GER_q_organization: "F.W. Quist"
+ STH_GER_q_organization_desc: "F.W. Quist aus Esslingen war einer der grossen deutschen Helmhersteller des Zweiten Weltkriegs, erkennbar an der Herstellerkennung Q auf Kampf- und Zivilschutzglocken."
+ STH_GER_q_initial_trait: "Präzisions-Stanzbetrieb"
+ STH_GER_q_initial_trait_desc: "Quists Ruf beruht auf sauberer Stanzarbeit und gleichmässiger Glockenfertigung über mehrere Helmmuster hinweg."
+ STH_GER_q_trait_precision_stamping: "Präzisionsstanzen"
+ STH_GER_q_trait_precision_stamping_desc: "Sorgfältige Matrizenarbeit erzeugt schärfere Glockenmerkmale und gleichmässigere Helmgeometrie."
+ STH_GER_q_trait_quality_control: "Strenge Qualitätskontrolle"
+ STH_GER_q_trait_quality_control_desc: "Strengere Prüfung verringert verformte Glocken, schwache Stanzungen und Beschichtungsfehler vor der Ausgabe."
+
+ # Emaillierwerke Fulda
+ STH_GER_ef_organization: "Emaillierwerke Fulda"
+ STH_GER_ef_organization_desc: "Die Emaillierwerke Fulda, mit EF markiert, waren ein anerkannter deutscher Helmhersteller mit industriellem Hintergrund in emaillierten und fertigbearbeiteten Metallwaren."
+ STH_GER_ef_initial_trait: "Spezialisten für Email- und Metallfinish"
+ STH_GER_ef_initial_trait_desc: "Fuldas Erfahrung mit Emaille und Metallfinish unterstützt dauerhafte Lack-, Farb- und Schutzbeschichtungen."
+ STH_GER_ef_trait_lacquer_finish: "Lackfinish"
+ STH_GER_ef_trait_lacquer_finish_desc: "Verbesserter Lackauftrag verleiht Helmen eine haltbarere Feldbeschichtung und bessere Wetterbeständigkeit."
+ STH_GER_ef_trait_corrosion_resistant_coating: "Korrosionsbeständige Beschichtung"
+ STH_GER_ef_trait_corrosion_resistant_coating_desc: "Bessere Beschichtungsvorbereitung schützt Stahlglocken während Lagerung und Feldeinsatz vor Rost."
+
+ # Vereinigte Deutsche Nickelwerke
+ STH_GER_ns_organization: "Vereinigte Deutsche Nickelwerke"
+ STH_GER_ns_organization_desc: "Die Vereinigten Deutschen Nickelwerke in Schwerte, mit NS markiert, gehörten zu den fünf wichtigsten Herstellern deutscher Kampfhelmglocken im Zweiten Weltkrieg."
+ STH_GER_ns_initial_trait: "Lieferant für Nickelstahl-Legierungen"
+ STH_GER_ns_initial_trait_desc: "Der metallurgische Hintergrund der Nickelwerke unterstützt zuverlässige Stahllieferung und Härtung von Helmglocken."
+ STH_GER_ns_trait_nickel_alloy_shell: "Nickellegierte Glocke"
+ STH_GER_ns_trait_nickel_alloy_shell_desc: "Verbesserte Stahlkontrolle und Legierungskenntnis erzeugen zähere, gleichmässigere Helmglocken."
+ STH_GER_ns_trait_hardened_steel: "Gehärteter Stahlprozess"
+ STH_GER_ns_trait_hardened_steel_desc: "Verfeinerte Wärmebehandlung verbessert die Widerstandsfähigkeit der Glocke gegen Verformung und Splittereinschlag."
+
+ # Sächsische Emaillier- und Stanzwerke
+ STH_GER_se_organization: "Sächsische Emaillier- und Stanzwerke"
+ STH_GER_se_organization_desc: "Die Sächsischen Emaillier- und Stanzwerke in Lauter, markiert mit SE und später hkp, waren ein Grossproduzent gestanzter deutscher Helmglocken."
+ STH_GER_se_initial_trait: "Hochleistungs-Stanzwerk"
+ STH_GER_se_initial_trait_desc: "Das Werk in Lauter verbindet Stanzkapazität mit Erfahrung in der Oberflächenbehandlung und eignet sich damit gut für grosse Helmaufträge."
+ STH_GER_se_trait_high_volume_stanzwerk: "Stanzwerk mit hoher Stückzahl"
+ STH_GER_se_trait_high_volume_stanzwerk_desc: "Erweiterte Presswerksleistung steigert die Produktion von Helmglocken für die Massenmobilisierung."
+ STH_GER_se_trait_efficient_enamel_line: "Effiziente Emaillierlinie"
+ STH_GER_se_trait_efficient_enamel_line_desc: "Effiziente Beschichtungslinien beschleunigen Lackierung und Schutzbeschichtung, ohne Glocken lange in der Fertigung aufzuhalten."

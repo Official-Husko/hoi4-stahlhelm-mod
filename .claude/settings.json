@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd localisation/english/STH_helmet_icon_names_l_english.yml)",
+      "Bash(xxd localisation/english/STH_l_english.yml)",
+      "Bash(bash -n generate_helmet_pictures_gfx.sh)"
+    ]
+  }
+}

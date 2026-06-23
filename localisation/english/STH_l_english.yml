@@ -1,133 +1,185 @@
 ﻿l_english:
- # --- Base infantry weapons (kept as the rifle dependency for infantry units) ---
- infantry_equipment:0 "Infantry Equipment"
- infantry_equipment_short:0 "Infantry Eq."
- infantry_equipment_0:0 "Basic Infantry Equipment"
- infantry_equipment_0_short:0 "Basic Eq."
- infantry_equipment_1:0 "Infantry weapons I"
- infantry_equipment_1_short:0 "Infantry weapons I"
- infantry_equipment_2:0 "Infantry weapons II"
- infantry_equipment_2_short:0 "Infantry weapons II"
- infantry_equipment_3:0 "Infantry weapons III"
- infantry_equipment_3_short:0 "Infantry weapons III"
- infantry_equipment_4:0 "Assault Rifles I"
- infantry_equipment_4_short:0 "Assault Rifles I"
- infantry_equipment_5:0 "Assault Rifles II"
- infantry_equipment_5_short:0 "Assault Rifles II"
- infantry_equipment_6:0 "Assault Rifles III"
- infantry_equipment_6_short:0 "Assault Rifles III"
- infantry_equipment_7:0 "Assault Rifles IV"
- infantry_equipment_7_short:0 "Assault Rifles IV"
- infantry_equipment_8:0 "Assault Rifles V"
- infantry_equipment_8_short:0 "Assault Rifles V"
+ #================================================================
+ # HELMET EQUIPMENT
+ #================================================================
 
- infantry_weapons:0 "Infantry Weapons"
- infantry_weapons1:0 "Infantry Weapons II"
- infantry_weapons2:0 "Infantry Weapons III"
- infantry_weapons3:0 "Infantry Weapons IV"
- infantry_weapons4:0 "Infantry Weapons V"
- infantry_weapons5:0 "Infantry Weapons VI"
- infantry_weapons6:0 "Infantry Weapons VII"
- infantry_weapons7:0 "Infantry Weapons VIII"
- infantry_weapons8:0 "Infantry Weapons IX"
+ # Generic helmet
+ STH_helmet_equipment: "Helmet"
+ STH_helmet_equipment_short: "Helmet"
+ STH_helmet_equipment_desc: "Steel helmets issued to infantry and other field troops, primarily to protect against shell splinters, debris, and battlefield impacts rather than direct rifle fire."
 
- # --- Helmet equipment ---
- STH_helmet_equipment:0 "Helmet"
- STH_helmet_equipment_short:0 "Helmet"
- STH_helmet_equipment_desc:0 "Steel helmets issued to infantry for head protection."
+ # Stahlhelm M16
+ STH_helmet_equipment_m16: "Stahlhelm M16"
+ STH_helmet_equipment_m16_short: "M16"
+ STH_helmet_equipment_m16_desc: "Germany's first mass-issued Stahlhelm, introduced during the First World War to replace leather headgear at the front. Its deep skirt and projecting vent lugs gave strong splinter protection, though the early liner and chinstrap system still showed its Pickelhaube heritage."
+ STH_helmet_program: "Stahlhelm M16"
+ STH_helmet_program_desc: "Begin production of the M16 Stahlhelm, the first German steel helmet issued in mass numbers. Its deep drawn shell offers far better splinter protection than leather headgear, though at the cost of weight, noise, and reduced hearing."
 
- STH_helmet_equipment_m16:0 "Stahlhelm M16"
- STH_helmet_equipment_m16_short:0 "M16"
- STH_helmet_equipment_m17:0 "Stahlhelm M17"
- STH_helmet_equipment_m17_short:0 "M17"
- STH_helmet_equipment_m18:0 "Stahlhelm M18"
- STH_helmet_equipment_m18_short:0 "M18"
- STH_helmet_equipment_m18_ventless:0 "Ventless M18 Helmet"
- STH_helmet_equipment_m18_ventless_short:0 "M18 (Ventless)"
- STH_helmet_equipment_m18_ventless_desc:0 "A production defect: the vent lug holes were never punched. Still serviceable."
- STH_helmet_equipment_m18ec:0 "Stahlhelm M18 (Ear Cut)"
- STH_helmet_equipment_m18ec_short:0 "M18 EC"
- STH_helmet_equipment_m34:0 "Stahlhelm M34"
- STH_helmet_equipment_m34_short:0 "M34"
+ # Stahlhelm M17
+ STH_helmet_equipment_m17: "Stahlhelm M17"
+ STH_helmet_equipment_m17_short: "M17"
+ STH_helmet_equipment_m17_desc: "The M17 was not a new shell pattern, but the M16 shell fitted with the improved 1917 steel liner band. It kept the same external form while making the liner assembly more durable under trench conditions."
+ STH_helmet_design_m17: "Stahlhelm M17"
+ STH_helmet_design_m17_desc: "Adopt the 1917 steel liner band for the M16 shell. This is a practical service improvement rather than a new helmet body, replacing the weaker leather liner band with a more durable metal one."
 
- STH_helmet_equipment_m35:0 "Stahlhelm M35"
- STH_helmet_equipment_m35_short:0 "M35"
- STH_helmet_equipment_m35_desc:0 "The standard German steel helmet adopted in 1935, replacing the WWI-era patterns with a lighter, better-protecting shell."
- STH_helmet_equipment_m37:0 "Fallschirmhelm M37"
- STH_helmet_equipment_m37_short:0 "M37"
- STH_helmet_equipment_m37_desc:0 "An early low-profile trial pattern for paratroopers, never issued at scale - superseded the following year by the refined M38."
- STH_helmet_equipment_m38:0 "Fallschirmhelm M38"
- STH_helmet_equipment_m38_short:0 "M38"
- STH_helmet_equipment_m38_desc:0 "A low-profile pattern with the brim removed and a four-point chin strap, developed for paratroopers. The refined, mass-issued successor to the M37 trial pattern."
- STH_helmet_equipment_m40:0 "Stahlhelm M40"
- STH_helmet_equipment_m40_short:0 "M40"
- STH_helmet_equipment_m40_desc:0 "A simplified version of the M35 with a one-piece stamped vent fitting, easing wartime production."
- STH_helmet_equipment_m42:0 "Stahlhelm M42"
- STH_helmet_equipment_m42_short:0 "M42"
- STH_helmet_equipment_m42_desc:0 "Further simplified production pattern that drops the rolled edge of earlier helmets to save material and machining time."
- STH_helmet_equipment_m45_prototype:0 "Stahlhelm M45 Prototype"
- STH_helmet_equipment_m45_prototype_short:0 "M45 Prototype"
- STH_helmet_equipment_m45_prototype_desc:0 "A rushed late-war prototype shell, cheapest and worst-protecting of the line as the German war economy collapsed."
+ # Stahlhelm M18
+ STH_helmet_equipment_m18: "Stahlhelm M18"
+ STH_helmet_equipment_m18_short: "M18"
+ STH_helmet_equipment_m18_desc: "A late First World War development of the M16/M17, distinguished mainly by its new chinstrap attachment fitted to the liner rather than the shell-mounted M1891 posts. It retained the familiar deep Stahlhelm profile while simplifying the soldier's suspension system."
+ STH_helmet_design_m18: "Stahlhelm M18"
+ STH_helmet_design_m18_desc: "Introduce the M18 liner-mounted chinstrap system. Moving the chinstrap attachment away from the old shell posts modernizes the suspension and removes a weak point inherited from pre-war helmet fittings."
 
- STH_helmet_equipment_gladiator_m38_3pc:0 "Gladiator M38, 3 Piece"
- STH_helmet_equipment_gladiator_m38_3pc_short:0 "Gladiator (3pc)"
- STH_helmet_equipment_gladiator_m38_3pc_desc:0 "Civil air-defense pattern helmet issued to Luftschutz wardens and other home-front personnel, built from 3 stamped pieces."
- STH_helmet_equipment_gladiator_m38_2pc:0 "Gladiator M38, 2 Piece"
- STH_helmet_equipment_gladiator_m38_2pc_short:0 "Gladiator (2pc)"
- STH_helmet_equipment_gladiator_m38_2pc_desc:0 "A simplified 2-piece version of the Gladiator Luftschutz helmet, cheaper to stamp."
- STH_helmet_equipment_gladiator_m38_1pc:0 "Gladiator M38, 1 Piece (M44)"
- STH_helmet_equipment_gladiator_m38_1pc_short:0 "Gladiator (1pc/M44)"
- STH_helmet_equipment_gladiator_m38_1pc_desc:0 "The final, one-piece simplification of the Gladiator Luftschutz helmet, often labeled M44."
+ # Ventless M18
+ STH_helmet_equipment_m18_ventless: "Ventless M18 Helmet"
+ STH_helmet_equipment_m18_ventless_short: "M18 (Ventless)"
+ STH_helmet_equipment_m18_ventless_desc: "An unusual ventless or unfinished-looking M18-type shell lacking the normal side ventilation fittings. Such helmets are rare and best treated as oddities, reworks, or production anomalies rather than a standard combat pattern."
 
- STH_helmet_equipment_volkssturm:0 "Volkssturm Stahlhelm Reissue"
- STH_helmet_equipment_volkssturm_short:0 "Volkssturm"
- STH_helmet_equipment_volkssturm_desc:0 "An emergency stopgap issued to the national militia, scraped together from whatever stock - old or new, military or civil-defense - happened to be on hand."
+ # M18 Ear Cut
+ STH_helmet_equipment_m18ec: "Stahlhelm M18 (Ear Cut)"
+ STH_helmet_equipment_m18ec_short: "M18 EC"
+ STH_helmet_equipment_m18ec_desc: "A scarce M18 variant with half-moon cut-outs beside the ears. The cut-outs were intended to improve hearing and reduce echo under the deep skirt, not specifically to fit telephone headsets despite the common collector nickname."
 
- STH_helmet_equipment_m35_beaded:0 "Beaded M35 Helmet"
- STH_helmet_equipment_m35_beaded_short:0 "M35 (Beaded)"
- STH_helmet_equipment_m35_beaded_desc:0 "A production defect: a beaded rolled edge applied where it shouldn't have been. Still serviceable."
- STH_helmet_equipment_m40_beaded:0 "Beaded M40 Helmet"
- STH_helmet_equipment_m40_beaded_short:0 "M40 (Beaded)"
- STH_helmet_equipment_m42_beaded:0 "Beaded M42 Helmet"
- STH_helmet_equipment_m42_beaded_short:0 "M42 (Beaded)"
+ # Stahlhelm M34
+ STH_helmet_equipment_m34: "Stahlhelm M34"
+ STH_helmet_equipment_m34_short: "M34"
+ STH_helmet_equipment_m34_desc: "A civic and police-style helmet associated with fire brigades, police, and other non-frontline services. Usually lighter than combat Stahlhelme, M34 helmets often had square-dip sides, pepperpot vents, black finish, and service-specific fittings."
 
- # --- Helmet technologies ---
- STH_helmet_program:0 "Stahlhelm M16"
- STH_helmet_design_m17:0 "Stahlhelm M17"
- STH_helmet_design_m18:0 "Stahlhelm M18"
- STH_helmet_design_m35:0 "Helmet Design: M35"
- STH_helmet_design_m37:0 "Helmet Design: M37 (Paratrooper Trial)"
- STH_helmet_design_m38:0 "Helmet Design: M38 (Paratrooper)"
- STH_helmet_design_m40:0 "Helmet Design: M40"
- STH_helmet_design_m42:0 "Helmet Design: M42"
- STH_helmet_design_m45_prototype:0 "Helmet Design: M45 Prototype"
- STH_helmet_gladiator_program:0 "Gladiator Helmet Program"
- STH_helmet_design_gladiator_2pc:0 "Gladiator Helmet: 2 Piece"
- STH_helmet_design_gladiator_1pc:0 "Gladiator Helmet: 1 Piece (M44)"
- STH_helmet_design_volkssturm:0 "Volkssturm Stahlhelm Reissue"
+ # Stahlhelm M35
+ STH_helmet_equipment_m35: "Stahlhelm M35"
+ STH_helmet_equipment_m35_short: "M35"
+ STH_helmet_equipment_m35_desc: "The standard German steel helmet adopted in 1935, replacing the WWI-era patterns with a lighter, more compact shell, rolled edge, separate inserted vents, and the M31 liner system."
+ STH_helmet_design_m35: "Helmet Design: M35"
+ STH_helmet_design_m35_desc: "Develop the M35 combat helmet: a smaller, lighter, rolled-edge shell with improved liner, reduced skirt, and separate inserted ventilation fittings. It becomes the basic pattern for Germany's Second World War combat helmets."
 
- # --- Helmet manufacturer MIOs ---
- STH_GER_et_organization:0 "Eisenhüttenwerk Thale"
- STH_GER_et_initial_trait:0 "Original Helmet Pattern Holder"
- STH_GER_et_trait_mass_production:0 "Mass Production Lines"
- STH_GER_et_trait_standardized_tooling:0 "Standardized Tooling"
+ # Beaded M35
+ STH_helmet_equipment_m35_beaded: "Beaded M35 Helmet"
+ STH_helmet_equipment_m35_beaded_short: "M35 (Beaded)"
+ STH_helmet_equipment_m35_beaded_desc: "A beaded M35-style shell generally associated with Luftschutz or other non-frontline use. The raised bead marked the helmet apart from normal combat issue, often indicating a downgraded, reworked, or civil-defense shell."
 
- STH_GER_q_organization:0 "F.W. Quist"
- STH_GER_q_initial_trait:0 "Precision Stamping House"
- STH_GER_q_trait_precision_stamping:0 "Precision Stamping"
- STH_GER_q_trait_quality_control:0 "Strict Quality Control"
+ # Fallschirmhelm M37
+ STH_helmet_equipment_m37: "Fallschirmhelm M37"
+ STH_helmet_equipment_m37_short: "M37"
+ STH_helmet_equipment_m37_desc: "An early Fallschirmjäger trial helmet derived from attempts to make a safer jump helmet. Its reduced brim and low profile helped prevent parachute harness and landing injuries, but it was rare and soon refined into the M38."
+ STH_helmet_design_m37: "Helmet Design: M37 (Paratrooper Trial)"
+ STH_helmet_design_m37_desc: "Trial a reduced-profile helmet for airborne troops. The M37 shows the need for a dedicated Fallschirmjäger helmet, as the standard Stahlhelm's brim and skirt are dangerous during parachute jumps."
 
- STH_GER_ef_organization:0 "Emaillierwerke Fulda"
- STH_GER_ef_initial_trait:0 "Enamel Finishing Specialists"
- STH_GER_ef_trait_lacquer_finish:0 "Lacquer Finish"
- STH_GER_ef_trait_corrosion_resistant_coating:0 "Corrosion-Resistant Coating"
+ # Fallschirmhelm M38
+ STH_helmet_equipment_m38: "Fallschirmhelm M38"
+ STH_helmet_equipment_m38_short: "M38"
+ STH_helmet_equipment_m38_desc: "The standard German paratrooper helmet, with the visor and neck skirt cut away to reduce snagging and landing injuries. Its four-point chinstrap and compact shell made it far better suited to airborne use than the normal Stahlhelm."
+ STH_helmet_design_m38: "Helmet Design: M38 (Paratrooper)"
+ STH_helmet_design_m38_desc: "Adopt the refined Fallschirmhelm M38. Its compact shell and secure four-point chinstrap make it suitable for parachute operations and establish the standard German airborne helmet pattern."
 
- STH_GER_ns_organization:0 "Vereinigte Deutsche Nickelwerke"
- STH_GER_ns_initial_trait:0 "Nickel-Steel Alloy Supplier"
- STH_GER_ns_trait_nickel_alloy_shell:0 "Nickel-Alloy Shell"
- STH_GER_ns_trait_hardened_steel:0 "Hardened Steel Process"
+ # Stahlhelm M40
+ STH_helmet_equipment_m40: "Stahlhelm M40"
+ STH_helmet_equipment_m40_short: "M40"
+ STH_helmet_equipment_m40_desc: "A wartime simplification of the M35. The overall shell form and rolled rim were retained, but the separate pressed-in vent bushings were replaced by vents stamped directly into the shell."
+ STH_helmet_design_m40: "Helmet Design: M40"
+ STH_helmet_design_m40_desc: "Simplify M35 production by stamping the ventilation holes directly into the shell. This creates the M40, visually close to the M35 but easier to manufacture in wartime quantities."
 
- STH_GER_se_organization:0 "Sächsische Emaillier- und Stanzwerke"
- STH_GER_se_initial_trait:0 "High-Volume Stamping Works"
- STH_GER_se_trait_high_volume_stanzwerk:0 "High-Volume Stanzwerk"
- STH_GER_se_trait_efficient_enamel_line:0 "Efficient Enamel Line"
+ # Beaded M40
+ STH_helmet_equipment_m40_beaded: "Beaded M40 Helmet"
+ STH_helmet_equipment_m40_beaded_short: "M40 (Beaded)"
+ STH_helmet_equipment_m40_beaded_desc: "A beaded M40-style shell used mainly for Luftschutz and home-front duties. It retained the stamped vent form of the M40 but was normally separated from first-line combat issue by the raised bead."
+
+ # Stahlhelm M42
+ STH_helmet_equipment_m42: "Stahlhelm M42"
+ STH_helmet_equipment_m42_short: "M42"
+ STH_helmet_equipment_m42_desc: "The final standard wartime combat Stahlhelm. It kept the stamped vents of the M40 but dropped the rolled edge, leaving a flared raw rim that saved steel, tooling time, and labour during high-volume production."
+ STH_helmet_design_m42: "Helmet Design: M42"
+ STH_helmet_design_m42_desc: "Remove the rolled rim from the standard combat helmet, producing the M42. The raw flared edge is less refined but saves time and material when production pressure is at its highest."
+
+ # Beaded M42
+ STH_helmet_equipment_m42_beaded: "Beaded M42 Helmet"
+ STH_helmet_equipment_m42_beaded_short: "M42 (Beaded)"
+ STH_helmet_equipment_m42_beaded_desc: "A beaded M42-style shell combining the late-war raw edge with a raised bead for civil-defense or downgraded use. Such helmets reflect Germany's practice of reusing usable shells outside normal combat channels."
+
+ # Stahlhelm M45 Prototype
+ STH_helmet_equipment_m45_prototype: "Stahlhelm M45 Prototype"
+ STH_helmet_equipment_m45_prototype_short: "M45 Prototype"
+ STH_helmet_equipment_m45_prototype_desc: "A late-war experimental B/II-style helmet associated with the Thale trials. Its flatter, more modern profile promised savings in material and labour, but it was not adopted for mass Wehrmacht service."
+ STH_helmet_design_m45_prototype: "Helmet Design: M45 Prototype"
+ STH_helmet_design_m45_prototype_desc: "Investigate the late-war B/II-style prototype helmet. Its more modern ballistic shape and production savings are promising, but logistical conservatism and the collapse of German industry prevent adoption."
+
+ # Gladiator M38, 3 Piece
+ STH_helmet_equipment_gladiator_m38_3pc: "Gladiator M38, 3 Piece"
+ STH_helmet_equipment_gladiator_m38_3pc_short: "Gladiator (3pc)"
+ STH_helmet_equipment_gladiator_m38_3pc_desc: "A civil air-defense helmet issued to Luftschutz personnel and other home-front services. The early Gladiator pattern used a three-piece stamped construction, usually with a dark blue or black finish and a Luftschutz front decal."
+ STH_helmet_gladiator_program: "Gladiator Helmet Program"
+ STH_helmet_gladiator_program_desc: "Begin production of Luftschutz Gladiator helmets for civil air defense. These helmets protect wardens, fire-fighting parties, and other home-front personnel from bomb splinters and falling debris."
+
+ # Gladiator M38, 2 Piece
+ STH_helmet_equipment_gladiator_m38_2pc: "Gladiator M38, 2 Piece"
+ STH_helmet_equipment_gladiator_m38_2pc_short: "Gladiator (2pc)"
+ STH_helmet_equipment_gladiator_m38_2pc_desc: "A simplified Luftschutz Gladiator helmet with a two-piece stamped body. It kept the broad civic helmet outline while reducing manufacturing complexity for civil-defense production."
+ STH_helmet_design_gladiator_2pc: "Gladiator Helmet: 2 Piece"
+ STH_helmet_design_gladiator_2pc_desc: "Simplify the Gladiator civil-defense helmet from three stamped pieces to two. The change reduces labour while keeping adequate protection for Luftschutz and home-front service."
+
+ # Gladiator M38, 1 Piece / M44
+ STH_helmet_equipment_gladiator_m38_1pc: "Gladiator M38, 1 Piece (M44)"
+ STH_helmet_equipment_gladiator_m38_1pc_short: "Gladiator (1pc/M44)"
+ STH_helmet_equipment_gladiator_m38_1pc_desc: "The final one-piece Gladiator-style Luftschutz simplification, often associated with the M44 civil helmet. It reduced cost and labour further, with cheaper liners and fittings becoming common late in the war."
+ STH_helmet_design_gladiator_1pc: "Gladiator Helmet: 1 Piece (M44)"
+ STH_helmet_design_gladiator_1pc_desc: "Adopt the one-piece Gladiator simplification, often called the M44. Late-war material shortages drive cheaper shells, simpler liners, and faster civil-defense production."
+
+ # Volkssturm Stahlhelm Reissue
+ STH_helmet_equipment_volkssturm: "Volkssturm Stahlhelm Reissue"
+ STH_helmet_equipment_volkssturm_short: "Volkssturm"
+ STH_helmet_equipment_volkssturm_desc: "An emergency issue helmet for the Volkssturm, drawn from whatever stocks were available: obsolete WWI shells, standard combat helmets, civic Luftschutz helmets, police helmets, captured helmets, and refurbished rejects."
+ STH_helmet_design_volkssturm: "Volkssturm Stahlhelm Reissue"
+ STH_helmet_design_volkssturm_desc: "Reissue every serviceable helmet available to the Volkssturm. Standardization gives way to emergency distribution of old, captured, civic, rejected, and refurbished helmets."
+
+
+ #================================================================
+ # HELMET MANUFACTURERS
+ #================================================================
+
+ # Eisenhüttenwerk Thale
+ STH_GER_et_organization: "Eisenhüttenwerk Thale"
+ STH_GER_et_organization_desc: "Eisenhüttenwerk Thale was the central name in German Stahlhelm development, linked to both WWI shell production and the M35 family of WWII combat helmets."
+ STH_GER_et_initial_trait: "Original Helmet Pattern Holder"
+ STH_GER_et_initial_trait_desc: "Thale's experience with original Stahlhelm patterns gives it a strong base for designing and tooling standard combat shells."
+ STH_GER_et_trait_mass_production: "Mass Production Lines"
+ STH_GER_et_trait_mass_production_desc: "Large-scale press capacity and established helmet tooling allow Thale to turn out standard shells in high quantities."
+ STH_GER_et_trait_standardized_tooling: "Standardized Tooling"
+ STH_GER_et_trait_standardized_tooling_desc: "Standard dies, gauges, and inspection methods reduce variation between helmet batches and speed up acceptance."
+
+ # F.W. Quist
+ STH_GER_q_organization: "F.W. Quist"
+ STH_GER_q_organization_desc: "F.W. Quist of Esslingen was one of the major WWII German helmet makers, identified by the Q maker mark on combat and civic shells."
+ STH_GER_q_initial_trait: "Precision Stamping House"
+ STH_GER_q_initial_trait_desc: "Quist's reputation rests on clean stamping work and consistent shell manufacture across multiple helmet patterns."
+ STH_GER_q_trait_precision_stamping: "Precision Stamping"
+ STH_GER_q_trait_precision_stamping_desc: "Careful die work produces sharper shell features and more consistent helmet geometry."
+ STH_GER_q_trait_quality_control: "Strict Quality Control"
+ STH_GER_q_trait_quality_control_desc: "Stricter inspection reduces malformed shells, weak stampings, and finish problems before issue."
+
+ # Emaillierwerke Fulda
+ STH_GER_ef_organization: "Emaillierwerke Fulda"
+ STH_GER_ef_organization_desc: "Emaillierwerke Fulda, marked EF, was a recognized German helmet producer whose industrial background lay in enamelled and finished metal goods."
+ STH_GER_ef_initial_trait: "Enamel Finishing Specialists"
+ STH_GER_ef_initial_trait_desc: "Fulda's experience with enamel and metal finishing supports durable paint, lacquer, and protective coating work."
+ STH_GER_ef_trait_lacquer_finish: "Lacquer Finish"
+ STH_GER_ef_trait_lacquer_finish_desc: "Improved lacquer application gives helmets a more durable field finish and better resistance to weathering."
+ STH_GER_ef_trait_corrosion_resistant_coating: "Corrosion-Resistant Coating"
+ STH_GER_ef_trait_corrosion_resistant_coating_desc: "Better coating preparation helps protect steel shells from rust during storage and field use."
+
+ # Vereinigte Deutsche Nickelwerke
+ STH_GER_ns_organization: "Vereinigte Deutsche Nickelwerke"
+ STH_GER_ns_organization_desc: "Vereinigte Deutsche Nickelwerke of Schwerte, marked NS, was one of the five main WWII German combat helmet shell makers."
+ STH_GER_ns_initial_trait: "Nickel-Steel Alloy Supplier"
+ STH_GER_ns_initial_trait_desc: "Nickelwerke's metallurgical background supports reliable steel supply and shell hardening work."
+ STH_GER_ns_trait_nickel_alloy_shell: "Nickel-Alloy Shell"
+ STH_GER_ns_trait_nickel_alloy_shell_desc: "Improved steel control and alloy knowledge produce tougher, more consistent helmet shells."
+ STH_GER_ns_trait_hardened_steel: "Hardened Steel Process"
+ STH_GER_ns_trait_hardened_steel_desc: "Refined heat treatment improves shell resilience against deformation and splinter impact."
+
+ # Sächsische Emaillier- und Stanzwerke
+ STH_GER_se_organization: "Sächsische Emaillier- und Stanzwerke"
+ STH_GER_se_organization_desc: "Sächsische Emaillier- und Stanzwerke of Lauter, marked SE and later hkp, was a high-volume producer of stamped German helmet shells."
+ STH_GER_se_initial_trait: "High-Volume Stamping Works"
+ STH_GER_se_initial_trait_desc: "The Lauter works combine stamping capacity with finishing experience, making them well suited to large helmet contracts."
+ STH_GER_se_trait_high_volume_stanzwerk: "High-Volume Stanzwerk"
+ STH_GER_se_trait_high_volume_stanzwerk_desc: "Expanded press-shop output increases helmet shell production for mass mobilization."
+ STH_GER_se_trait_efficient_enamel_line: "Efficient Enamel Line"
+ STH_GER_se_trait_efficient_enamel_line_desc: "Efficient finishing lines speed up painting and coating without holding shells on the factory floor."
